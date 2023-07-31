@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@section Links{
+    <link rel="stylesheet" href="~/assets/css/cart.css">
+}
+
+<section class="slider-area">
+    <div class="container">
+        <div class="cartsection">
+            <h2>Cart</h2>
+        </div>
+    </div>
+</section>
+
+<section class="cart-section-area">
+    <div class="container">
+        <div class="title-of-product">
+            <div class="product">
+                <h4>Product</h4>
+            </div>
+            <div class="price-quantity-total">
+                <h4>Price</h4>
+                <h4>Quantity</h4>
+                <h4>Total</h4>
+            </div>
+        </div>
+        <div class="about-of-product">
+            <div class="img-of-product">
+                <img src="~/assets/img/best-books1.jpg.webp" alt="">
+                <h3>Minimalistic shop for multipurpose use</h3>
+            </div>
+            <div class="price-of-product">
+                <h4>$360.00</h4>
+                <div class="quantity-product">
+                    <input type="button" class="dcrbtn" onclick="decrementValue()" value="-" />
+                    <input type="text" class="number" name="quantity" value="1" maxlength="2" max="10" size="1"
+                           id="number" />
+                    <input type="button" class="incbtn" onclick="incrementValue()" value="+" />
+                </div>
+                <h4>$720.00</h4>
+            </div>
+        </div>
+        <div class="about-of-product">
+            <div class="img-of-product">
+                <img src="~/assets/img/best_selling1.jpg.webp" alt="">
+                <h3>Minimalistic shop for multipurpose use</h3>
+            </div>
+            <div class="price-of-product">
+                <h4>$360.00</h4>
+                <div class="quantity-product">
+                    <input type="button" class="dcrbtn" onclick="decrementValuebtn()" value="-" />
+                    <input type="text" class="number" name="quantity" value="1" maxlength="2" max="10" size="1"
+                           id="number" />
+                    <input type="button" class="incbtn" onclick="incrementValuebtn()" value="+" />
+                </div>
+                <h4>$720.00</h4>
+            </div>
+        </div>
+        <div class="subtotal">
+            <h5 class="subtotal-price">Subtotal</h5>
+            <h5>$2160.00</h5>
+        </div>
+        <div class="continue">
+            <a href="" class="continue-shopping">
+                <button class="continue-shopping-btn">
+                    <h1>Continue Shopping</h1>
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/assets/js/cart.js"></script>
+}

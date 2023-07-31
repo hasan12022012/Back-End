@@ -1,0 +1,506 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@section Links{
+    <link rel="stylesheet" href="~/assets/css/categories.css">
+}
+
+<section class="slider-area">
+    <div class="container">
+        <div class="bookcategoryimgsection">
+            <h2>Book Shop</h2>
+        </div>
+    </div>
+</section>
+
+<section class="book-shop-area">
+    <div class="container">
+        <div class="filtersettings">
+            <div class="filterwindow">
+                <form action="">
+                    <div class="searchbar">
+                        <label for="search">
+                            <input type="text" id="search" placeholder="Search book by author or publisher">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass" id="iconsearch"></i>
+                        </label>
+                    </div>
+                    <div class="filterbygenres">
+                        <h4>Filter by Genres</h4>
+                        <label for="">
+                            <input type="checkbox">
+                            History
+                        </label>
+                        <label for="">
+                            <input type="checkbox" checked="checked active">
+                            Horror - Thriller
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Love Stories
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Science Fiction
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Biography
+                        </label>
+                    </div>
+                    <div class="filterbyprice">
+                        <h4>Filter by Price</h4>
+                        <div class="range">
+                            &nbsp;
+                            <div class="range-slider">
+                                <div class="progress"></div>
+                                <span class="range-min-wrapper">
+                                    <input class="range-min" type="range" min="0" max="1000" value="0">
+                                </span>
+                                <span class="range-max-wrapper">
+                                    <input class="range-max" type="range" min="0" max="1000" value="500">
+                                </span>
+                            </div>
+                            &nbsp;
+                            <div class="rangeview">
+                                <div class="min-value numberVal">
+                                    <input type="number" class="" min="0" max="100" value="0" disabled>
+                                </div>
+                                <span>to</span>
+                                <div class="max-value numberVal">
+                                    <input type="number" class="border text-center" min="0" max="1000" value="500"
+                                           disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterbyrating">
+                        <div class="select-btn">
+                            <span class="sBtn-text">Filter by Rating</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text">5 Star Rating</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">4 Star Rating</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">3 Star Rating</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">2 Star Rating</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">1 Star Rating</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filterbypublisher">
+                        <h4>Filter by Genres</h4>
+                        <label for="">
+                            <input type="checkbox">
+                            Green Publications
+                        </label>
+                        <label for="">
+                            <input type="checkbox" checked="checked active">
+                            Anondo Publications
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Rinku Publications
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Sheba Publications
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Red Publications
+                        </label>
+                    </div>
+                    <div class="filterauthorname">
+                        <h4>Filter by Author Name</h4>
+                        <label for="">
+                            <input type="checkbox">
+                            Buster Hyman
+                        </label>
+                        <label for="">
+                            <input type="checkbox" checked="checked active">
+                            Phil Harmonic
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Cam L. Toe
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Otto Matic
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Juan Annatoo
+                        </label>
+                    </div>
+                    <button class="submit-btn">
+                        <h1>Submit</h1>
+                    </button></a>
+                </form>
+            </div>
+            <div class="browsemenu">
+                <div class="browse-by-popularity">
+                    <div class="browse-by-popularity-btn">
+                        <span class="sBrowse-by-popularity-btn-text">Browse by popularity</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="browse-by-popularities">
+                        <li class="browse_list">
+                            <span class="browse-text">Browse by popularity</span>
+                        </li>
+                        <li class="browse_list">
+                            <span class="browse-text">Name</span>
+                        </li>
+                        <li class="browse_list">
+                            <span class="browse-text">NEW</span>
+                        </li>
+                        <li class="browse_list">
+                            <span class="browse-text">Old</span>
+                        </li>
+                        <li class="browse_list">
+                            <span class="browse-text">Price</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="books">
+                    <ul class="carousel">
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling7.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling8.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling6.jpg (1).webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling4.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="carousel">
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling7.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling8.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling6.jpg (1).webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling4.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="carousel">
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling7.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling8.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling6.jpg (1).webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card_image">
+                                <a href="bookdetails.html">
+                                    <img src="~/assets/img/best_selling4.jpg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="card_content">
+                                <a href="bookdetails.html">Moon Dance</a>
+                                <p>J. R Rain</p>
+                                <div class="card_text">
+                                    <div class="starsreview">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        <p>(<span>120</span>Review)</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="browsebtn">
+                    <a href="">
+                        <button class="browsemorebtn">
+                            <h1>Browse More</h1>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="joinnewsletter">
+    <div class="container">
+        <div class="sub">
+            <h3>Join Newsletter</h3>
+            <p>
+                Lorem started its journey with cast iron (CI) products in 1980. The initial main
+                objective<br>wastoensure pure water and affordable irrigation.
+            </p>
+            <form action="#">
+                <input type="text" placeholder="Enter your email" required="required">
+                <a href="">
+                    <button class="subscribe-btn">
+                        <h1>Subscribe</h1>
+                    </button>
+                </a>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/assets/js/categories.js"></script>
+}

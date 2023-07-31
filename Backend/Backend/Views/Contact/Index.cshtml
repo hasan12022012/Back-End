@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@section Links{
+    <link rel="stylesheet" href="~/assets/css/contact.css">
+}
+
+<section class="slider-area">
+    <div class="container">
+        <div class="contactsection">
+            <h2>Contact</h2>
+        </div>
+    </div>
+</section>
+
+<section class="iframe-section">
+    <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d100736.13751515912!2d-122.13604191302512!3d37.906962247998706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8085619726c1487d%3A0x514442351043dfdc!2sButtonwood%2C%201990%20N%20California%20Blvd%2C%20Walnut%20Creek%2C%20CA%2094596%2C%20United%20States!3m2!1d37.906983!2d-122.06600189999999!5e0!3m2!1sen!2saz!4v1688472229912!5m2!1sen!2saz"
+                width="1320" height="450" style="border:0; margin-top: 70px; margin-bottom: 70px;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<section class="get-in-touch-section">
+    <div class="container">
+        <div class="get-in-touch-section-content">
+            <div class="getintouch">
+                <form action="">
+                    <h2>Get in Touch</h2>
+                    <textarea name="" id="" placeholder="Enter Message" required="required"></textarea>
+                    <div>
+                        <input type="text" placeholder="Enter Your Name" required="required" />
+                        <input type="text" placeholder="Enter Your Email" required="required" id="entermail" />
+                    </div>
+                    <input type="text" placeholder="Enter Subject" required="required" id="subject" />
+                    <div class="send">
+                        <button>Send</button>
+                    </div>
+                </form>
+                <div class="contactus">
+                    <div class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h1>Buttonwood, California.</h1>
+                        <p>Rosemead, CA 91770</p>
+                    </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <h1>+1 253 565 2365</h1>
+                        <p>Mon to Fri 9am to 6pm</p>
+                    </div>
+                    <div class="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h1>support@colorlib.com</h1>
+                        <p>Send us your query anytime!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/assets/js/contact.js"></script>
+}

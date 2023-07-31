@@ -1,0 +1,159 @@
+﻿@{
+    ViewData["Title"] = "Detail";
+}
+
+@section Links{
+    <link rel="stylesheet" href="~/assets/css/bookdetails.css">
+}
+
+<section class="addtocart">
+    <div class="container">
+        <div class="detailscard">
+            <div class="bookdetails">
+                <div class="bookimg">
+                    <img src="~/assets/img/best-books1.jpg.webp" alt="">
+                </div>
+                <div class="captions">
+                    <h3>The Rage of Dragons</h3>
+                    <p>By Evan Winter</p>
+                    <span>$50.00</span>
+                    <div class="ratedegree">
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p>(120Review)</p>
+                    </div>
+                    <a href="" class="addtocartway">
+                        <button class="addtocartbtn">
+                            <h1>Add To Cart</h1>
+                        </button>
+                    </a>
+                    <a href="" class="shareway">
+                        <button class="sharebtn">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="aboutbook">
+    <div class="container">
+        <div class="titletab">
+            <ul class="tabs">
+                <li class="tab-link current" data-tab="tab-1">Description</li>
+                <li class="tab-link" data-tab="tab-2">Author</li>
+                <li class="tab-link" data-tab="tab-3">Reviews</li>
+            </ul>
+        </div>
+        <div id="tab-1" class="tab-content current">
+            <p>
+                Beryl Cook is one of Britain’s most talented and amusing artists .Beryl’s pictures feature women of
+                all shapes and sizes enjoying themselves .Born between the two world wars, Beryl Cook eventually
+                left Kendrick School in Reading at the age of 15, where she went to secretarial school and then into
+                an insurance office. After moving to London and then Hampton, she eventually married her next door
+                neighbour from Reading, John Cook. He was an officer in the Merchant Navy and after he left the sea
+                in 1956, they bought a pub for a year before John took a job in Southern Rhodesia with a motor
+                company. Beryl bought their young son a box of watercolours, and when showing him how to use it, she
+                decided that she herself quite enjoyed painting. John subsequently bought her a child’s painting set
+                for her birthday and it was with this that she produced her first significant work, a half-length
+                portrait of a dark-skinned lady with a vacant expression and large drooping breasts. It was aptly
+                named ‘Hangover’ by Beryl’s husband and
+            </p>
+            <p>
+                It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are
+                seeing more and more recipe books and Internet websites that are dedicated to the act of cooking for
+                one. Divorce and the death of spouses or grown children leaving for college are all reasons that
+                someone accustomed to cooking for more than one would suddenly need to learn how to adjust all the
+                cooking practices utilized before into a streamlined plan of cooking that is more efficient for one
+                person creating less.
+            </p>
+        </div>
+        <div id="tab-2" class="tab-content">
+            <p>
+                It is often frustrating to attempt to plan meals that are designed for one. Despite this fact, we are
+                seeing more and more recipe books and Internet websites that are dedicated to the act of cooking for
+                one. Divorce and the death of spouses or grown children leaving for college are all reasons that
+                someone accustomed to cooking for more than one would suddenly need to learn how to adjust all the
+                cooking practices utilized before into a streamlined plan of cooking that is more efficient for one
+                person creating less.
+            </p>
+        </div>
+        <div id="tab-3" class="tab-content">
+            <div class="comment-list">
+                <div class="thumb">
+                    <img src="~/assets/img/comment_1.png.webp" alt="">
+                </div>
+                <div class="desc">
+                    <p class="comment">
+                        Multiply sea night grass fourth day sea lesser rule open subdue female fill which
+                        them
+                        Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
+                    </p>
+                    <div class="name-date">
+                        <a href="">
+                            <h5>Emilly Blunt</h5>
+                        </a>
+                        <p class="date">December 4, 2017 at 3:12 pm </p>
+                        <div class="starsreview">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rating-box">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <form action="#">
+                <textarea name="" id="" placeholder="Comment" required="required"></textarea>
+                <div class="name-email">
+                    <input class="name" type="text" placeholder="Name">
+                    <input class="email" type="text" placeholder="Email">
+                </div>
+                <div class="post-review">
+                    <button>Post Comment</button>
+                </div>
+            </form>
+        </div>
+</section>
+
+<section class="joinnewsletter">
+    <div class="container">
+        <div class="sub">
+            <h3>Join Newsletter</h3>
+            <p>
+                Lorem started its journey with cast iron (CI) products in 1980. The initial main
+                objective<br>wastoensure pure water and affordable irrigation.
+            </p>
+            <form action="#">
+                <input type="text" placeholder="Enter your email" required="required">
+                <a href="">
+                    <button class="subscribe-btn">
+                        <h1>Subscribe</h1>
+                    </button>
+                </a>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/assets/js/bookdetails.js"></script>
+}

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1320px;
+    margin: auto;
+}
+
+
+/* part2body css start ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.slider-area .container .cartsection {
+    background-image: url(../img/aboutpic.webp);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.slider-area .container .cartsection h2 {
+    color: #fff;
+    font-size: 50px;
+    font-family: "Playfair Display", serif;
+    display: block;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    padding-top: 130px;
+}
+
+/* part2body css end ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+/* part3body css start ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.cart-section-area {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cart-section-area .container .title-of-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-section-area .container .title-of-product .price-quantity-total {
+    width: 444px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-section-area .container .title-of-product .product h4 {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+}
+
+.cart-section-area .container .title-of-product .price-quantity-total h4 {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+}
+
+.cart-section-area .container .about-of-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 30px;
+}
+
+.cart-section-area .container .about-of-product .img-of-product {
+    display: flex;
+    align-items: center;
+}
+
+.cart-section-area .container .about-of-product .img-of-product img {
+    width: 150px;
+    border-radius: 3px;
+}
+
+.cart-section-area .container .about-of-product .img-of-product h3 {
+    font-family: "Roboto", sans-serif;
+    color: #301A22;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 30px;
+}
+
+
+
+
+
+.cart-section-area .container .about-of-product .price-of-product {
+    display: flex;
+    justify-content: space-between;
+    width: 444px;
+}
+
+.cart-section-area .container .about-of-product .price-of-product h4 {
+    font-size: 14px;
+    color: #2a2a2a;
+    font-family: "Roboto", sans-serif;
+}
+
+.cart-section-area .container .about-of-product .price-of-product .quantity-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-section-area .container .about-of-product .price-of-product .quantity-product .dcrbtn {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #eeeeee;
+}
+
+.cart-section-area .container .about-of-product .price-of-product .quantity-product .incbtn {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #eeeeee;
+}
+
+.cart-section-area .container .about-of-product .price-of-product .quantity-product .number {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #eeeeee;
+}
+
+
+
+
+
+
+.cart-section-area .container .subtotal {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 30px;
+}
+
+.cart-section-area .container .subtotal .subtotal-price {
+    margin-right: 170px;
+}
+
+.cart-section-area .container .subtotal h5 {
+    font-size: 14px;
+    color: #2a2a2a;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0px;
+}
+
+
+.cart-section-area .container .continue{
+    margin-top: 20px;
+}
+
+
+.cart-section-area .container .continue .continue-shopping .continue-shopping-btn {
+    width: 200px;
+    height: 45px;
+    border-radius: 35px;
+    background-color: #FF1616;
+    border: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+}
+
+.cart-section-area .container .continue .continue-shopping .continue-shopping-btn h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.cart-section-area .container .continue .continue-shopping .continue-shopping-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    background: #d00101;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.cart-section-area .container .continue .continue-shopping .continue-shopping-btn::before {
+    transform: scaleX(0);
+}
+
+.cart-section-area .container .continue .continue-shopping .continue-shopping-btn:hover::before {
+    transform: scaleX(1);
+}
+/* part3body css end ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+#back-to-top i {
+    color: white;
+    margin-left: 4px;
+}
+
+#back-to-top {
+    display: inline-block;
+    text-align: center;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    background: #FF1616;
+    height: 50px;
+    width: 50px;
+    right: 31px;
+    bottom: 18px;
+    position: fixed;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 48px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}

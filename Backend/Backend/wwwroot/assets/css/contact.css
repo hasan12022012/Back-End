@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1320px;
+    margin: auto;
+}
+
+/* part2body css start//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.slider-area .container .contactsection {
+    background-image: url(../img/aboutpic.webp);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.slider-area .container .contactsection h2 {
+    color: #fff;
+    font-size: 50px;
+    display: block;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    padding-top: 130px;
+}
+
+/* part2body css end//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+/* part3body css start//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.iframe-section{
+    padding-top: 30px;
+}
+/* part3body css end//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+/* part4body css start//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.get-in-touch-section .container .get-in-touch-section-content .getintouch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .getintouch form h2 {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .getintouch form textarea {
+    width: 850px !important;
+    height: 175px !important;
+    outline: none;
+    border: 1px solid #CACACA;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    padding-left: 18px;
+    padding-top: 10px;
+    margin-bottom: 19px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .getintouch form div input {
+    height: 48px;
+    outline: none;
+    padding-left: 18px;
+    border: 1px solid #CACACA;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    width: 414px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .getintouch form div #entermail {
+    margin-left: 19px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .getintouch form #subject {
+    height: 48px;
+    outline: none;
+    padding-left: 18px;
+    border: 1px solid #CACACA;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    width: 850px;
+    margin-top: 19px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .getintouch form .send button {
+    background: #fff;
+    color: #FF1616 !important;
+    display: inline-block;
+    padding: 18px 44px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    border: 1px solid #FF1616;
+    cursor: pointer;
+    width: 155px;
+    height: 65px;
+    margin-top: 50px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .getintouch form .send button:hover {
+    background: #FF1616;
+    color: #fff !important;
+    border: 1px solid #FF1616;
+    transition: all .3s ease-out 0s;
+}
+
+
+
+
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus {
+    border-radius: 5px 5px 5px 5px;
+    width: 330px;
+    padding-top: 19px;
+}
+
+
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .address i {
+    margin-top: 35px;
+    margin-left: 25px;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 5px 5px 5px 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .address h1 {
+    position: relative;
+    bottom: 45px;
+    left: 80px;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .address p {
+    position: relative;
+    bottom: 42px;
+    left: 80px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    color: #8a8a8a;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .email i {
+    margin-left: 25px;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 5px 5px 5px 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .email h1 {
+    position: relative;
+    bottom: 45px;
+    left: 80px;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .email p {
+    position: relative;
+    bottom: 42px;
+    left: 80px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    color: #8a8a8a;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .phone i {
+    margin-left: 25px;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 5px 5px 5px 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .phone h1 {
+    position: relative;
+    bottom: 45px;
+    left: 80px;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+.get-in-touch-section .container .get-in-touch-section-content .contactus .phone p {
+    position: relative;
+    bottom: 42px;
+    left: 80px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    color: #8a8a8a;
+}
+
+/* part4body css end//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+#back-to-top i {
+    color: white;
+    margin-left: 4px;
+}
+
+#back-to-top {
+    display: inline-block;
+    text-align: center;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    background: #FF1616;
+    height: 50px;
+    width: 50px;
+    right: 31px;
+    bottom: 18px;
+    position: fixed;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 48px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}

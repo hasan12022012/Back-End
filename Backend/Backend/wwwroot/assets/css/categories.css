@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1320px;
+    margin: auto;
+}
+
+
+/* part2body css start ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.slider-area .container .bookcategoryimgsection {
+    background-image: url(../img/bookcategoryimgsection.webp);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.slider-area .container .bookcategoryimgsection h2 {
+    color: #fff;
+    font-size: 50px;
+    display: block;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    padding-top: 130px;
+}
+
+/* part2body css end ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+/* part3body css start ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.book-shop-area {
+   margin-top: 50px;
+}
+
+.book-shop-area .container .filtersettings {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-shop-area .container .filtersettings .filterwindow {
+    width: 410px;
+    height: 1140px;
+    border: 1px solid #ededed;
+    padding: 30px 19px 30px 30px;
+}
+
+
+
+.book-shop-area .container .filtersettings .filterwindow .searchbar {
+    margin-bottom: 30px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .searchbar label {
+    display: flex;
+    align-items: center;
+    width: 370px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .searchbar label #search {
+    border: 1px solid rgba(35, 47, 85, 0.15);
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 100%;
+    height: 50px;
+    outline: none;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .searchbar label ::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    position: relative;
+    top: 2px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .searchbar label #iconsearch {
+    color: #FF1616;
+    cursor: pointer;
+    font-size: 22px;
+    position: relative;
+    right: 40px;
+}
+
+
+
+
+.book-shop-area .container .filtersettings .filterwindow .filterbygenres h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 22px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbygenres label {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    color: #232F55;
+    font-size: 16px;
+    align-items: center;
+    padding-top:5px ;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbygenres label input {
+    accent-color: red;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range {
+    margin-left: 20px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .range-slider {
+    position: relative;
+    width: 314px;
+    height: 2px;
+    border-radius: 15px;
+    background: red;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .range-slider .progress {
+    position: absolute;
+    left: 25%;
+    right: 0%;
+    height: 100%;
+    border-radius: 15px;
+    background: red;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .range-slider input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    -webkit-appearance: none;
+    pointer-events: none;
+    background: none;
+    outline: none;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .range-slider .range-min::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fcfcfc 0% 0% no-repeat padding-box;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .range-slider .range-max::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fcfcfc 0% 0% no-repeat padding-box;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .rangeview {
+    display: flex;
+    margin-left: 18px;
+    align-items: center;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .rangeview span {
+    margin-right: 18px;
+    margin-left: -30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .rangeview .min-value input {
+    border: none;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyprice .range .rangeview .max-value input {
+    border: none;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyrating {
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyrating .select-btn {
+    display: flex;
+    height: 45px;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    border: 1px solid #eeeeee;
+    border-radius: 35px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyrating .select-btn i {
+    font-size: 15px;
+    color: black;
+    transition: 0.3s;
+}
+
+.book-shop-area .container .filtersettings .filterwindow  .filterbyrating.active .select-btn i {
+    transform: rotate(-180deg);
+}
+
+.book-shop-area .container .filtersettings .filterwindow  .filterbyrating .options {
+    position: relative;
+    margin-top: 10px;
+    border: 1px solid #eeeeee;
+    display: none;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyrating.active .options {
+    display: block;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyrating .options .option {
+    display: flex;
+    height: 35px;
+    cursor: pointer;
+    padding: 0 16px;
+    align-items: center;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyrating .options .option:hover {
+    background: #F4F4F4;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbyrating .options .option .option-text {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+
+
+.book-shop-area .container .filtersettings .filterwindow .filterbypublisher {
+    margin-top: 30px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbypublisher h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 22px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbypublisher label {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    color: #232F55;
+    font-size: 16px;
+    align-items: center;
+    padding-top:5px ;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterbypublisher label input {
+    accent-color: red;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterauthorname {
+    margin-top: 30px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterauthorname h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 22px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterauthorname label {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    color: #232F55;
+    font-size: 16px;
+    align-items: center;
+    padding-top:5px ;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .filterauthorname label input {
+    accent-color: red;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+.book-shop-area .container .filtersettings .filterwindow .submit-btn {
+    width: 120px;
+    height: 50px;
+    border-radius: 35px;
+    background-color: #FF1616;
+    border: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+    top: 20px;
+    left: 110px;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .submit-btn  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.book-shop-area .container .filtersettings .filterwindow .submit-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    background: #d00101;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.book-shop-area .container .filtersettings .filterwindow .submit-btn::before {
+    transform: scaleX(0);
+}
+
+.book-shop-area .container .filtersettings .filterwindow .submit-btn:hover::before {
+    transform: scaleX(1);
+}
+
+
+
+.book-shop-area .container .filtersettings .browsemenu {
+    position: relative;
+}
+
+
+
+.book-shop-area .container .filtersettings .browsemenu  .browse-by-popularity {
+    width: 294px;
+    position: relative;
+    margin-left: 67%;
+}
+
+.book-shop-area .container .filtersettings .browsemenu  .browse-by-popularity .browse-by-popularity-btn {
+    display: flex;
+    height: 45px;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    border: 1px solid #eeeeee;
+    border-radius: 35px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .browse-by-popularity .browse-by-popularity-btn i {
+    font-size: 15px;
+    color: black;
+    transition: 0.3s;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .browse-by-popularity.active .browse-by-popularity-btn i {
+    transform: rotate(-180deg);
+}
+
+.book-shop-area .container .filtersettings .browsemenu  .browse-by-popularity .browse-by-popularities {
+    position: relative;
+    margin-top: 10px;
+    border: 1px solid #eeeeee;
+    display: none;
+}
+
+.book-shop-area .container .filtersettings .browsemenu  .browse-by-popularity.active .browse-by-popularities {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+}
+
+.book-shop-area .container .filtersettings .browsemenu  .browse-by-popularity .browse-by-popularities .browse_list {
+    display: flex;
+    height: 35px;
+    cursor: pointer;
+    padding: 0 16px;
+    align-items: center;
+}
+
+.book-shop-area .container .filtersettings .browsemenu  .browse-by-popularity .browse-by-popularities .browse_list:hover {
+    background: #F4F4F4;
+}
+
+.book-shop-area .container .filtersettings .browsemenu  .browse-by-popularity .browse-by-popularities .browse_list .browse-text {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.book-shop-area .container .filtersettings .browsemenu .books {
+    width:890px;
+}
+
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card {
+    border: 1px solid #EEE1E0;
+    width: 198px;
+    list-style-type: none;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content {
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color: white;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content a {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content p {
+    color: #9498A7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 13px;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content .card_text {
+    display: flex;
+    align-items: center;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content .card_text .starsreview i {
+    font-size: 13px;
+    color: #FF5700;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content .card_text .starsreview p {
+    color: #9498A7;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content .card_text .starsreview p span {
+    color: #FF5700;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content .card_text .price {
+    margin-left: 40px;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card .card_content .card_text .price span {
+    cursor: pointer;
+    font-weight: 500;
+    color: #FF1616;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card:focus,
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card:hover {
+    transform: scale();
+    box-shadow: 5px 5px 5px 5px rgba(195, 2, 2, 0.2);
+    transition: 0.5s;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .books .carousel .card:hover a {
+    color: red;
+    transition: 0.5s;
+}
+
+
+.book-shop-area .container .filtersettings .browsemenu .browsebtn {
+    margin-left: 40%;
+    margin-right: 60%;
+    padding-top: 40px;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .browsebtn a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .browsebtn a button {
+    width: 180px;
+    height: 60px;
+    border: 1px solid red;
+    border-radius: 30px;
+    background: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .browsebtn a .browsemorebtn h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: red;
+    position: relative;
+    z-index: 1;
+}
+
+.book-shop-area .container .filtersettings .browsemenu .browsebtn a button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.book-shop-area .container .filtersettings .browsemenu .browsebtn a button:hover h1 {
+    color: white;
+}
+
+
+.book-shop-area .container .filtersettings .browsemenu .browsebtn a button::before {
+    transform: scaleY(0);
+}
+
+.book-shop-area .container .filtersettings .browsemenu .browsebtn a button:hover::before {
+    transform: scaleY(1);
+}
+
+/* part3body css end ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+#back-to-top i {
+    color: white;
+    margin-left: 4px;
+}
+
+#back-to-top {
+    display: inline-block;
+    text-align: center;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    background: #FF1616;
+    height: 50px;
+    width: 50px;
+    right: 31px;
+    bottom: 18px;
+    position: fixed;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 48px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}

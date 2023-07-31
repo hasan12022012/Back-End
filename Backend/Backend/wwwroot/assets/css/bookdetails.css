@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1320px;
+    margin: auto;
+}
+
+
+/* addtocart css start //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.addtocart .container .detailscard {
+    width: 100%;
+    height: 485px;
+    background-color: red;
+}
+
+.addtocart .container .detailscard .bookdetails {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    padding-top: 30px;
+}
+
+.addtocart .container .detailscard .bookdetails .captions {
+    padding-left: 40px;
+}
+
+.addtocart .container .detailscard .bookdetails .captions h3 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 9px;
+    font-weight: 400;
+    color: white;
+}
+
+.addtocart .container .detailscard .bookdetails .captions p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.addtocart .container .detailscard .bookdetails .captions span {
+    font-weight: 500;
+    font-size: 32px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .ratedegree {
+    display: flex;
+    align-items: center;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .ratedegree p {
+    margin-top: 30px;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .ratedegree div i {
+    color: white;
+    font-size: 16px;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .ratedegree p {
+    color: white;
+}
+
+
+.addtocart .container .detailscard .bookdetails .captions .addtocartway {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .addtocartway .addtocartbtn {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background: white;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .addtocartway .addtocartbtn h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .addtocartway .addtocartbtn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.addtocart .container .detailscard .bookdetails .captions .addtocartway .addtocartbtn:hover h1 {
+    color: white;
+    transition: .6s;
+}
+
+
+.addtocart .container .detailscard .bookdetails .captions .addtocartway .addtocartbtn::before {
+    transform: scaleX(0);
+}
+
+.addtocart .container .detailscard .bookdetails .captions .addtocartway .addtocartbtn:hover::before {
+    transform: scaleX(1);
+}
+
+
+.addtocart .container .detailscard .bookdetails .bookdetails .captions .shareway {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 400;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .shareway .sharebtn {
+    width: 53px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .shareway .sharebtn i {
+    font-size: 18px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.addtocart .container .detailscard .bookdetails .captions .shareway .sharebtn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.addtocart .container .detailscard .bookdetails .captions .shareway .sharebtn:hover i {
+    color: red;
+    transition: all 0.6s;
+}
+
+
+.addtocart .container .detailscard .bookdetails .captions .shareway .sharebtn::before {
+    transform: scaleY(0);
+}
+
+.addtocart .container .detailscard .bookdetails .captions .shareway .sharebtn:hover::before {
+    transform: scaleY(1);
+}
+
+/* addtocart css end //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* aboutbook css start //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.aboutbook {
+    margin-top: 50px;
+}
+
+.aboutbook .container .titletab {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutbook .container .titletab .tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.aboutbook .container .titletab .tabs li {
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    border: 1px solid #EEE1E0;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 7px 24px;
+    margin-right: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.aboutbook .container .titletab .tabs li.current {
+    background: red;
+    color: white;
+}
+
+.aboutbook .container .tab-content {
+    margin-top: 40px;
+    display: none;
+    background: white;
+}
+
+.aboutbook .container .tab-content p {
+    font-family: "Roboto", sans-serif;
+    color: #301A22;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.aboutbook .container .tab-content.current {
+    display: inherit;
+}
+
+
+
+.aboutbook .container #tab-3 .comment-list{
+    display: flex;
+    align-items: center;
+    height: 137px;
+    width: 854px;
+    margin-bottom: 30px;
+}
+
+.aboutbook .container #tab-3 .comment-list .desc{
+    margin-left: 20px;
+}
+
+.aboutbook .container #tab-3 .comment-list .desc .comment{
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #777777;
+    line-height: 1.6;
+}
+
+
+
+.aboutbook .container #tab-3 .comment-list .desc .name-date{
+    display: flex;
+}
+
+.aboutbook .container #tab-3 .comment-list .desc .name-date a{
+    text-decoration: none;
+}
+
+.aboutbook .container #tab-3 .comment-list .desc .name-date a h5{
+    font-size: 16px;
+    font-family: "Playfair Display",serif;
+    color: #1a1a1a;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.aboutbook .container #tab-3 .comment-list .desc .name-date .starsreview {
+    margin-left: 20px;
+}
+
+.aboutbook .container #tab-3 .comment-list .desc .name-date .starsreview i{
+color: #ff9c1a;
+}
+
+.aboutbook .container #tab-3 .comment-list .desc .name-date a h5:hover{
+    color:#FF1616;
+}
+
+.aboutbook .container #tab-3 .comment-list .desc .name-date .date{
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #777777;
+}
+
+
+.aboutbook .container #tab-3 .rating-box {
+    position: relative;
+    
+}
+
+.aboutbook .container #tab-3 .rating-box .stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.aboutbook .container #tab-3 .rating-box .stars i {
+    color: #e6e6e6;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.aboutbook .container #tab-3 .rating-box .stars i.active {
+    color: #ff9c1a;
+}
+
+
+
+
+
+
+.aboutbook .container #tab-3 form textarea {
+    display: block;
+    width: 854px !important;
+    height: 150px !important;
+    outline: none;
+    border: 1px solid #CACACA;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding-left: 18px;
+    padding-top: 18px;
+    margin-top: 30px;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+
+.aboutbook .container #tab-3 form textarea:focus {
+    border: 3px solid #a5cdf3;
+}
+
+.aboutbook .container #tab-3 form textarea:focus::placeholder{
+    opacity: 0;
+}
+
+
+
+
+
+
+.aboutbook .container #tab-3 form .name-email{
+    display: flex;
+    justify-content: space-between;
+    width: 854px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.aboutbook .container #tab-3 form .name-email .name:focus {
+    border: 3px solid #a5cdf3;
+}
+
+.aboutbook .container #tab-3 form .name-email .name:focus::placeholder {
+    opacity: 0;
+}
+
+
+.aboutbook .container #tab-3 form .name-email .name  {
+    border: 1px solid #CACACA;
+    width: 415px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+
+.aboutbook .container #tab-3 form .name-email .email:focus {
+    border: 3px solid #a5cdf3;
+}
+
+.aboutbook .container #tab-3 form .name-email .email:focus::placeholder {
+    opacity: 0;
+}
+
+.aboutbook .container #tab-3 form .name-email .email{
+    border: 1px solid #CACACA;
+    width: 415px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+
+
+
+.aboutbook .container #tab-3 form .post-review button {
+    background: #fff;
+    color: #FF1616 !important;
+    display: inline-block;
+    font-size: 18px;
+    font-family: "Playfair Display",serif;
+    font-weight: 400;
+    border: 1px solid #FF1616;
+    cursor: pointer;
+    width: 183px;
+    height: 54px;
+    margin-top: 30px;
+}
+
+.aboutbook .container #tab-3 form .post-review button:hover {
+    background: #FF1616;
+    color: #fff !important;
+    border: 1px solid #FF1616;
+    transition: all .3s ease-out 0s;
+}
+
+/* aboutbook css end //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+#back-to-top i {
+    color: white;
+    margin-left: 4px;
+}
+
+#back-to-top {
+    display: inline-block;
+    text-align: center;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    background: #FF1616;
+    height: 50px;
+    width: 50px;
+    right: 31px;
+    bottom: 18px;
+    position: fixed;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 48px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 1320px;
+    margin: auto;
+}
+/* part2body css start ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.part2body .container .checkout {
+    background-image: url(../img/aboutpic.webp);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.part2body .container .checkout h2 {
+    color: #fff;
+    font-size: 50px;
+    font-family: "Playfair Display", serif;
+    display: block;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    padding-top: 130px;
+}
+/* part2body css end ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* part3body css start ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.part3body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.part3body .container .returning-customer .check-title {
+    background-color: #F4F4F4;
+    padding: 0px 0px 0px 30px;
+}
+.part3body .container .returning-customer .check-title h2 {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    background: #f4f4f4;
+    line-height: 40px;
+    margin-bottom: 0px;
+}
+.part3body .container .returning-customer .check-title h2 a {
+    color: red;
+}
+.part3body .container .returning-customer p {
+    margin-top: 15px;
+    padding-left: 30px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #301A22;
+    line-height: 30px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.part3body .container .returning-customer form .username-password {
+    display: flex;
+    justify-content: space-between;
+    width: 54%;
+    padding-left: 25px;
+    padding-bottom: 20px;
+}
+.part3body .container .returning-customer form .username-password .username-email input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .returning-customer form .username-password .username-email input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .returning-customer form .username-password .username-email input {
+    border: 1px solid #eeeeee;
+    width: 331px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .returning-customer form .username-password .password {
+    position: relative;
+}
+.part3body .container .returning-customer form .username-password .password input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .returning-customer form .username-password .password input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .returning-customer form .username-password .password input {
+    border: 1px solid #eeeeee;
+    width: 331px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .returning-customer form .login-btn {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+.part3body .container .returning-customer form .login-btn a {
+    margin-right: 10px;
+}
+.part3body .container .returning-customer form .login-btn a button {
+    width: 120px;
+    height: 50px;
+    border-radius: 35px;
+    background-color: #FF1616;
+    border: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+}
+.part3body .container .returning-customer form .login-btn a button h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.part3body .container .returning-customer form .login-btn a button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    background: #d00101;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.part3body .container .returning-customer form .login-btn a button::before {
+    transform: scaleX(0);
+}
+.part3body .container .returning-customer form .login-btn a button:hover::before {
+    transform: scaleX(1);
+}
+.part3body .container .returning-customer form .login-btn label {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+.part3body .container .returning-customer form .login-btn label input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    vertical-align: bottom;
+    accent-color: #FF1616;
+    transition: .5s;
+}
+.part3body .container .cupon-area {
+    margin-top: 20px;
+}
+.part3body .container .cupon-area .check-title {
+    background-color: #F4F4F4;
+    padding: 0px 0px 0px 30px;
+}
+.part3body .container .cupon-area .check-title h2 {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    background: #f4f4f4;
+    line-height: 40px;
+    margin-bottom: 0px;
+}
+.part3body .container .cupon-area .check-title h2 a {
+    color: red;
+}
+.part3body .container .cupon-area input {
+    margin-left: 30px;
+    max-width: 730px;
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 3px;
+    padding: 0px 15px;
+    border: 1px solid #eeeeee;
+    outline: none;
+    box-shadow: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+.part3body .container .cupon-area .applycoupon {
+    margin-right: 10px;
+}
+.part3body .container .cupon-area .applycoupon button {
+    width: 170px;
+    height: 45px;
+    border-radius: 35px;
+    background-color: #FF1616;
+    border: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+}
+.part3body .container .cupon-area .applycoupon button h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.part3body .container .cupon-area .applycoupon button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    background: #d00101;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.part3body .container .cupon-area .applycoupon button::before {
+    transform: scaleX(0);
+}
+.part3body .container .cupon-area .applycoupon button:hover::before {
+    transform: scaleX(1);
+}
+.part3body .container .billing-details {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.part3body .container .billing-details .about-customer h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2a2a2a;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.part3body .container .billing-details .about-customer .name-surname {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.part3body .container .billing-details .about-customer .name-surname .firstname input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .name-surname .firstname input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .billing-details .about-customer .name-surname .firstname input {
+    border: 1px solid #eeeeee;
+    width: 415px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .name-surname .lastname input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .name-surname .lastname input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .billing-details .about-customer .name-surname .lastname input {
+    border: 1px solid #eeeeee;
+    width: 415px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .company-name {
+    padding-bottom: 20px;
+}
+.part3body .container .billing-details .about-customer .company-name input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .company-name input {
+    border: 1px solid #eeeeee;
+    width: 854px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .phone-email {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.part3body .container .billing-details .about-customer .phone-email .phone-number {
+    position: relative;
+}
+.part3body .container .billing-details .about-customer .phone-email .phone-number input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .phone-email .phone-number input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .billing-details .about-customer .phone-email .phone-number input {
+    border: 1px solid #eeeeee;
+    width: 415px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .phone-email .email-address {
+    position: relative;
+}
+.part3body .container .billing-details .about-customer .phone-email .email-address input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .phone-email .email-address input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .billing-details .about-customer .phone-email .email-address input {
+    border: 1px solid #eeeeee;
+    width: 415px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .select-menu {
+    width: 854px;
+    margin-bottom: 50px;
+}
+.part3body .container .billing-details .about-customer .select-menu .select-btn {
+    display: flex;
+    height: 45px;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #797979;
+    border: 1px solid #eeeeee;
+    border-radius: 35px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.part3body .container .billing-details .about-customer .select-menu .select-btn i {
+    font-size: 15px;
+    color: black;
+    transition: 0.3s;
+}
+.part3body .container .billing-details .about-customer .select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+}
+.part3body .container .billing-details .about-customer .select-menu .options {
+    position: relative;
+    margin-top: 10px;
+    border: 1px solid #eeeeee;
+    display: none;
+}
+.part3body .container .billing-details .about-customer .select-menu.active .options {
+    display: block;
+}
+.part3body .container .billing-details .about-customer .select-menu .options .option {
+    display: flex;
+    height: 35px;
+    cursor: pointer;
+    padding: 0 16px;
+    align-items: center;
+}
+.part3body .container .billing-details .about-customer .select-menu .options .option:hover {
+    background: #F4F4F4;
+}
+.part3body .container .billing-details .about-customer .select-menu .options .option .option-text {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.part3body .container .billing-details .about-customer .addressline01 {
+    margin-bottom: 20px;
+}
+.part3body .container .billing-details .about-customer .addressline01 input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .addressline01 input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .billing-details .about-customer .addressline01 input {
+    border: 1px solid #eeeeee;
+    width: 854px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .addressline02 {
+    margin-bottom: 20px;
+}
+.part3body .container .billing-details .about-customer .addressline02 input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .addressline02 input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .billing-details .about-customer .addressline02 input {
+    border: 1px solid #eeeeee;
+    width: 854px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .town-city input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .town-city input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .billing-details .about-customer .town-city input {
+    border: 1px solid #eeeeee;
+    width: 854px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .district {
+    width: 854px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.part3body .container .billing-details .about-customer .district .district-btn {
+    display: flex;
+    height: 45px;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #797979;
+    border: 1px solid #eeeeee;
+    border-radius: 35px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.part3body .container .billing-details .about-customer .district .district-btn i {
+    font-size: 15px;
+    color: black;
+    transition: 0.3s;
+}
+.part3body .container .billing-details .about-customer .district.active .district-btn i {
+    transform: rotate(-180deg);
+}
+.part3body .container .billing-details .about-customer .district .districts {
+    position: relative;
+    margin-top: 10px;
+    border: 1px solid #eeeeee;
+    display: none;
+}
+.part3body .container .billing-details .about-customer .district.active .districts {
+    display: block;
+}
+.part3body .container .billing-details .about-customer .district .districts .districtlist {
+    display: flex;
+    height: 35px;
+    cursor: pointer;
+    padding: 0 16px;
+    align-items: center;
+}
+.part3body .container .billing-details .about-customer .district .districts .districtlist:hover {
+    background: #F4F4F4;
+}
+.part3body .container .billing-details .about-customer .district .districts .districtlist .district-text {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.part3body .container .billing-details .about-customer .postcode {
+    margin-bottom: 30px;
+}
+.part3body .container .billing-details .about-customer .postcode input:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .about-customer .postcode input:focus::placeholder {
+    opacity: 0;
+}
+.part3body .container .billing-details .about-customer .postcode input {
+    border: 1px solid #eeeeee;
+    width: 854px;
+    height: 40px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #797979;
+    font-weight: normal;
+    outline: none;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .create-account {
+    margin-bottom: 30px;
+}
+.part3body .container .billing-details .about-customer .create-account label {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+.part3body .container .billing-details .about-customer .create-account label input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    vertical-align: bottom;
+    accent-color: #FF1616;
+    transition: .5s;
+}
+.part3body .container .billing-details .about-customer .shipping-details label {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+.part3body .container .billing-details .about-customer .shipping-details label input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    vertical-align: bottom;
+    accent-color: #FF1616;
+    transition: .5s;
+}
+.part3body .container .billing-details .about-customer .shipping-details textarea {
+    display: block;
+    width: 854px !important;
+    height: 150px !important;
+    outline: none;
+    border: 1px solid #CACACA;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding-left: 18px;
+    padding-top: 18px;
+    margin-top: 30px;
+    transition: .10s ease-in-out, .10s ease-in-out;
+}
+.part3body .container .billing-details .about-customer .shipping-details textarea:focus {
+    border: 3px solid #a5cdf3;
+}
+.part3body .container .billing-details .your-order {
+    width: 415px;
+    height: 786px;
+    background: #F4F4F4;
+    padding: 30px;
+}
+.part3body .container .billing-details .your-order h2 {
+    border-bottom: 1px solid #dddddd;
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    color: #2a2a2a;
+    padding-bottom: 15px;
+}
+.part3body .container .billing-details .your-order .product-list {
+    margin-top: 10px;
+}
+.part3body .container .billing-details .your-order .product-list li {
+    list-style-type: none;
+}
+.part3body .container .billing-details .your-order .product-list li a {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #797979;
+    font-weight: normal;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    line-height: 42px;
+}
+.part3body .container .billing-details .your-order .product-list li .middle {
+    text-align: right;
+    display: inline-block;
+    color: #2a2a2a;
+}
+.part3body .container .billing-details .your-order .sumofproduct li {
+    list-style-type: none;
+}
+.part3body .container .billing-details .your-order .sumofproduct li a {
+    text-transform: uppercase;
+    color: #2a2a2a;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    line-height: 42px;
+    text-decoration: none;
+}
+.part3body .container .billing-details .your-order .sumofproduct li a span {
+    color: #797979;
+    text-transform: capitalize;
+}
+.part3body .container .billing-details .your-order .payment-item {
+    margin-top: 15px;
+}
+.part3body .container .billing-details .your-order .payment-item div {
+    display: flex;
+}
+.part3body .container .billing-details .your-order .payment-item div label {
+    cursor: pointer;
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+    color: #2a2a2a;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.part3body .container .billing-details .your-order .payment-item div input{
+    accent-color: red;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+}
+.part3body .container .billing-details .your-order .payment-item p{
+    width: 355px;
+    height: 84px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    background: white;
+    margin-bottom: 20px;
+}
+.part3body .container .billing-details .your-order .terms-conditions{
+    margin-bottom: 25px;
+}
+.part3body .container .billing-details .your-order .terms-conditions label {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+.part3body .container .billing-details .your-order .terms-conditions label input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+    vertical-align: bottom;
+    accent-color: #FF1616;
+    transition: .5s;
+}
+.part3body .container .billing-details .your-order .terms-conditions label  a{
+    color: red;
+    text-decoration: none;
+}
+.part3body .container .billing-details .your-order .proceed-to-paypal .proceedbtn button {
+    width: 360px;
+    height: 43px;
+    border-radius: 35px;
+    background-color: #FF1616;
+    border: none;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    overflow: hidden;
+}
+.part3body .container .billing-details .your-order .proceed-to-paypal  .proceedbtn button h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.part3body .container .billing-details .your-order .proceed-to-paypal   .proceedbtn button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    background: #d00101;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.part3body .container .billing-details .your-order .proceed-to-paypal   .proceedbtn button::before {
+    transform: scaleX(0);
+}
+.part3body .container .billing-details .your-order .proceed-to-paypal   .proceedbtn button:hover::before {
+    transform: scaleX(1);
+}
+
+/* part3body css end ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* part3body css end ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+#back-to-top i {
+    color: white;
+    margin-left: 4px;
+}
+
+#back-to-top {
+    display: inline-block;
+    text-align: center;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    background: #FF1616;
+    height: 50px;
+    width: 50px;
+    right: 31px;
+    bottom: 18px;
+    position: fixed;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 48px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
