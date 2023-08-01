@@ -1,4 +1,6 @@
-﻿@{
+﻿@model BlogVM
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -18,181 +20,43 @@
     <div class="container">
         <div class="blog">
             <div class="news">
-                <div class="blog-item">
-                    <div class="blog-item-img">
-                        <img src="~/assets/img/single_blog_1.jpg.webp" alt="">
-                        <a href="" class="blog-item-date">
-                            <h3>15</h3>
-                            <p>Jan</p>
-                        </a>
+                @foreach (var blog in Model.Blogs)
+                {
+                    <div class="blog-item">
+                        <div class="blog-item-img">
+                            <img src="~/assets/img/@blog.Image" alt="">
+                            <a href="" class="blog-item-date">
+                                <h3>@blog.CreatedAt.ToString("dd")</h3>
+                                <p>@blog.CreatedAt.ToString("MMM")</p>
+                            </a>
+                        </div>
+                        <div class="blog-details">
+                            <a asp-action="Detail" asp-route-id="@blog.Id" class="blog-head">
+                                <h2>@blog.Name</h2>
+                            </a>
+                            <p>
+                                @blog.Description
+                            </p>
+                            <ul class="blog-info-link">
+                                <li class="travel-lifestyle">
+                                    <a href="">
+                                        <i class="fa-solid fa-user"></i>
+                                        &nbsp;
+                                        @blog.BlogCategory.Name
+                                    </a>
+                                </li>
+                                <div class="v_line"></div>
+                                <li class="comments">
+                                    <a href="">
+                                        <i class="fa-solid fa-comments"></i>
+                                        &nbsp;
+                                        03 Comments
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="blog-details">
-                        <a href="blogdetails.html" class="blog-head">
-                            <h2>Google inks pact for new 35-storey office</h2>
-                        </a>
-                        <p>
-                            That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.
-                        </p>
-                        <ul class="blog-info-link">
-                            <li class="travel-lifestyle">
-                                <a href="">
-                                    <i class="fa-solid fa-user"></i>
-                                    &nbsp;
-                                    Travel, Lifestyle
-                                </a>
-                            </li>
-                            <div class="v_line"></div>
-                            <li class="comments">
-                                <a href="">
-                                    <i class="fa-solid fa-comments"></i>
-                                    &nbsp;
-                                    03 Comments
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="blog-item-img">
-                        <img src="~/assets/img/single_blog_2.jpg.webp" alt="">
-                        <a href="" class="blog-item-date">
-                            <h3>15</h3>
-                            <p>Jan</p>
-                        </a>
-                    </div>
-                    <div class="blog-details">
-                        <a href="blogdetails.html" class="blog-head">
-                            <h2>Google inks pact for new 35-storey office</h2>
-                        </a>
-                        <p>
-                            That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.
-                        </p>
-                        <ul class="blog-info-link">
-                            <li class="travel-lifestyle">
-                                <a href="">
-                                    <i class="fa-solid fa-user"></i>
-                                    &nbsp;
-                                    Travel, Lifestyle
-                                </a>
-                            </li>
-                            <div class="v_line"></div>
-                            <li class="comments">
-                                <a href="">
-                                    <i class="fa-solid fa-comments"></i>
-                                    &nbsp;
-                                    03 Comments
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="blog-item-img">
-                        <img src="~/assets/img/single_blog_3.jpg.webp" alt="">
-                        <a href="" class="blog-item-date">
-                            <h3>15</h3>
-                            <p>Jan</p>
-                        </a>
-                    </div>
-                    <div class="blog-details">
-                        <a href="blogdetails.html" class="blog-head">
-                            <h2>Google inks pact for new 35-storey office</h2>
-                        </a>
-                        <p>
-                            That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.
-                        </p>
-                        <ul class="blog-info-link">
-                            <li class="travel-lifestyle">
-                                <a href="">
-                                    <i class="fa-solid fa-user"></i>
-                                    &nbsp;
-                                    Travel, Lifestyle
-                                </a>
-                            </li>
-                            <div class="v_line"></div>
-                            <li class="comments">
-                                <a href="">
-                                    <i class="fa-solid fa-comments"></i>
-                                    &nbsp;
-                                    03 Comments
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="blog-item-img">
-                        <img src="~/assets/img/single_blog_4.jpg.webp" alt="">
-                        <a href="" class="blog-item-date">
-                            <h3>15</h3>
-                            <p>Jan</p>
-                        </a>
-                    </div>
-                    <div class="blog-details">
-                        <a href="blogdetails.html" class="blog-head">
-                            <h2>Google inks pact for new 35-storey office</h2>
-                        </a>
-                        <p>
-                            That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.
-                        </p>
-                        <ul class="blog-info-link">
-                            <li class="travel-lifestyle">
-                                <a href="">
-                                    <i class="fa-solid fa-user"></i>
-                                    &nbsp;
-                                    Travel, Lifestyle
-                                </a>
-                            </li>
-                            <div class="v_line"></div>
-                            <li class="comments">
-                                <a href="">
-                                    <i class="fa-solid fa-comments"></i>
-                                    &nbsp;
-                                    03 Comments
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="blog-item-img">
-                        <img src="~/assets/img/single_blog_5.jpg.webp" alt="">
-                        <a href="" class="blog-item-date">
-                            <h3>15</h3>
-                            <p>Jan</p>
-                        </a>
-                    </div>
-                    <div class="blog-details">
-                        <a href="blogdetails.html" class="blog-head">
-                            <h2>Google inks pact for new 35-storey office</h2>
-                        </a>
-                        <p>
-                            That dominion stars lights dominion divide years for fourth have don't stars is that
-                            he earth it first without heaven in place seed it second morning saying.
-                        </p>
-                        <ul class="blog-info-link">
-                            <li class="travel-lifestyle">
-                                <a href="">
-                                    <i class="fa-solid fa-user"></i>
-                                    &nbsp;
-                                    Travel, Lifestyle
-                                </a>
-                            </li>
-                            <div class="v_line"></div>
-                            <li class="comments">
-                                <a href="">
-                                    <i class="fa-solid fa-comments"></i>
-                                    &nbsp;
-                                    03 Comments
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                }
                 <div class="blog-pagination">
                     <ul class="pagination">
                         <li class="page-item"><a href=""><i class="fa-solid fa-chevron-left"></i></a></li>

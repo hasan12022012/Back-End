@@ -2,11 +2,11 @@
 
 namespace Backend.ViewModels
 {
-    public class HomeVM
+    public class ProductVM
     {
-        public IEnumerable<Slider>? Sliders { get; set; }
         public IEnumerable<Product>? Products { get; set; }
         public IEnumerable<Genre>? Genres { get; set; }
-        public Banner? Banner { get; set; }
+        public IEnumerable<Author>? Authors { get; set; }
+        public Product? Product { get; set; }
     }
 }

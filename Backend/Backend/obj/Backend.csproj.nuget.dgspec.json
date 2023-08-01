@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\Backend.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\Backend.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\Backend.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -3,6 +3,7 @@ using Backend.Models;
 using Backend.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Backend.Controllers
 {
@@ -25,13 +26,23 @@ namespace Backend.Controllers
                 .Where(m => !m.IsDeleted)
                 .Include(m => m.ProductImages)
                 .Include(m => m.Author)
+                .Include(m => m.ProductGenres)
                 .ToListAsync();
+
+            IEnumerable<Genre> genres = await _context.Genres
+                .Where(m => !m.IsDeleted)
+            .ToListAsync();
+
+            Banner banner = await _context.Banners
+                .Where(m => !m.IsDeleted)
+                .FirstOrDefaultAsync();
 
             HomeVM model = new()
             {
                 Sliders = sliders,
-                Products = products
-
+                Products = products,
+                Genres = genres,
+                Banner = banner
             };
 
             return View(model);

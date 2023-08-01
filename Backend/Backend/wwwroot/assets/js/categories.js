@@ -17,7 +17,25 @@ options.forEach(option => {
 // filterbyrating js end////////////////////////////////////////////////////////////////////////////////////
 
 
+$(document).ready(function () {
+    $(document).on("keyup", "#search", function () {
+        let inputVal = $(this).val().trim();
 
+        $(".carousel li").slice(0).remove();
+        $.ajax({
+            url: "product/search",
+            type: "Get",
+            contentType: "application/x-www-form-urlencoded",
+            data: {
+                search: inputVal
+            },
+
+            success: function (res) {
+                $(".carousel").append(res);
+            }
+        });
+    });
+})
 
 
 

@@ -1,6 +1,7 @@
 ﻿using Backend.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Backend.DataAccessLayer
 {
@@ -24,5 +25,7 @@ namespace Backend.DataAccessLayer
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Rating> Ratings { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Banner> Banners { get; set; }
+        public DbSet<About> Abouts { get; set; }
     }
 }

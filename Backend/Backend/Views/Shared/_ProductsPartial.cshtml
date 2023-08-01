@@ -1,0 +1,29 @@
+﻿@model ProductVM
+
+@foreach (var product in Model.Products)
+{
+    <li class="card col-3">
+        <div class="card_image">
+            <a asp-action="Detail" asp-route-id="@product.Id">
+                <img width="100%" src="~/assets/img/@product.ProductImages.FirstOrDefault(m => m.IsMain).Name" alt="">
+            </a>
+        </div>
+        <div class="card_content">
+            <a asp-action="Detail" asp-route-id="@product.Id">@product.Name</a>
+            <p>@product.Author.Name</p>
+            <div class="card_text">
+                <div class="starsreview">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p>(<span>120</span>Review)</p>
+                </div>
+                <div class="price">
+                    <span>$@product.Price</span>
+                </div>
+            </div>
+        </div>
+    </li>
+}
