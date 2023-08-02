@@ -8,6 +8,12 @@ $(document).ready(function () {
         let category = $(this).attr('data-id');
         let products = $('.card');
 
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active")
+        } else {
+            $(this).addClass("active")
+        }
+
         products.each(function () {
             if (category == $(this).attr('data-id')) {
                 $(this).parent().fadeIn();

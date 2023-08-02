@@ -34,20 +34,20 @@
                             <div class="range-slider">
                                 <div class="progress"></div>
                                 <span class="range-min-wrapper">
-                                    <input class="range-min" type="range" min="0" max="1000" value="0">
+                                    <input class="range-min" onchange="postChange()" type="range" min="10" max="54" value="10">
                                 </span>
                                 <span class="range-max-wrapper">
-                                    <input class="range-max" type="range" min="0" max="1000" value="500">
+                                    <input class="range-max" onchange="postChange()" type="range" min="10" max="54" value="54">
                                 </span>
                             </div>
                             &nbsp;
                             <div class="rangeview">
                                 <div class="min-value numberVal">
-                                    <input type="number" class="" min="0" max="100" value="0" disabled>
+                                    <input type="number" onkeyup="postChange()" class="min" min="10" max="54" value="10" disabled>
                                 </div>
-                                <span>to</span>
+                                <span>to</span> 
                                 <div class="max-value numberVal">
-                                    <input type="number" class="border text-center" min="0" max="1000" value="500"
+                                    <input type="number" onkeyup="postChange()" class="border text-center max" min="10" max="54" value="54"
                                            disabled>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                     </ul>
                 </div>
                 <div class="books">
-                    <ul class="carousel row" style="row-gap: 15px; padding-left: 20px;">
+                    <ul class="carousel row" style="padding-left: 20px; justify-content: flex-start;">
                         <partial name="_ProductsPartial" />
                     </ul>
                 </div>
@@ -166,3 +166,26 @@
 @section Scripts{
     <script src="~/assets/js/categories.js"></script>
 }
+
+
+<script>
+    function postChange() {
+        const minPrice = document.querySelector(".min").value;
+        const maxPrice = document.querySelector(".max").value;
+
+        let page = document.querySelector(".carousel");
+
+        $.ajax({
+            url: "product/filterprice",
+            type: "Get",
+            contentType: "application/x-www-form0urlencoded",
+            data: {
+                min: minPrice,
+                max: maxPrice
+            },
+            success: function (res) {
+                page.innerHTML = res
+            }
+        })
+    }
+</script>

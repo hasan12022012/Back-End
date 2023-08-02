@@ -1,327 +1,331 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Backend.bundle.scp.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Backend.bundle.scp.css",
       "PackagePath": "staticwebassets\\Backend.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\about.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\about.css",
       "PackagePath": "staticwebassets\\assets\\css\\about.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\blog.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\blog.css",
       "PackagePath": "staticwebassets\\assets\\css\\blog.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\blogdetails.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\blogdetails.css",
       "PackagePath": "staticwebassets\\assets\\css\\blogdetails.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\bookdetails.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\bookdetails.css",
       "PackagePath": "staticwebassets\\assets\\css\\bookdetails.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\cart.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\cart.css",
       "PackagePath": "staticwebassets\\assets\\css\\cart.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\categories.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\categories.css",
       "PackagePath": "staticwebassets\\assets\\css\\categories.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\checkout.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\checkout.css",
       "PackagePath": "staticwebassets\\assets\\css\\checkout.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\contact.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\contact.css",
       "PackagePath": "staticwebassets\\assets\\css\\contact.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\login.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\login.css",
       "PackagePath": "staticwebassets\\assets\\css\\login.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\signup.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\signup.css",
       "PackagePath": "staticwebassets\\assets\\css\\signup.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\css\\style.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\aboutbook.avif",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\aboutbook.avif",
       "PackagePath": "staticwebassets\\assets\\img\\aboutbook.avif"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\aboutpic.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\aboutpic.webp",
       "PackagePath": "staticwebassets\\assets\\img\\aboutpic.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\author.png.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\author.png.webp",
       "PackagePath": "staticwebassets\\assets\\img\\author.png.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best-books1.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best-books1.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best-books1.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling1.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling1.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling1.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling2.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling2.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling2.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling3.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling3.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling3.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling4.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling4.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling4.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling5.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling5.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling5.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling6.jpg (1).webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling6.jpg (1).webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling6.jpg (1).webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling7.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling7.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling7.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling8.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling8.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling8.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling9.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best_selling9.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\best_selling9.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\blogbackground.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\blogbackground.webp",
       "PackagePath": "staticwebassets\\assets\\img\\blogbackground.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\bookadvertise.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\bookadvertise.webp",
       "PackagePath": "staticwebassets\\assets\\img\\bookadvertise.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\bookcategoryimgsection.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\bookcategoryimgsection.webp",
       "PackagePath": "staticwebassets\\assets\\img\\bookcategoryimgsection.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\cart.svg",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\cart.svg",
       "PackagePath": "staticwebassets\\assets\\img\\cart.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\comment_1.png.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\comment_1.png.webp",
       "PackagePath": "staticwebassets\\assets\\img\\comment_1.png.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\comment_2.png.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\comment_2.png.webp",
       "PackagePath": "staticwebassets\\assets\\img\\comment_2.png.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\comment_3.png.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\comment_3.png.webp",
       "PackagePath": "staticwebassets\\assets\\img\\comment_3.png.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\down-chevron.png",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\down-chevron.png",
       "PackagePath": "staticwebassets\\assets\\img\\down-chevron.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\firstbookback.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\firstbookback.webp",
       "PackagePath": "staticwebassets\\assets\\img\\firstbookback.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\joinsectionback.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\joinsectionback.webp",
       "PackagePath": "staticwebassets\\assets\\img\\joinsectionback.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\logo.png.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\logo.png.webp",
       "PackagePath": "staticwebassets\\assets\\img\\logo.png.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_1.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_1.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_1.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_10.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_10.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_10.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_2.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_2.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_2.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_3.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_3.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_3.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_4.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_4.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_4.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_5.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_5.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_5.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_6.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_6.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_6.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_7.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_7.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_7.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_8.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_8.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_8.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\post_9.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\post_9.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\post_9.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\secondbookback.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\secondbookback.webp",
       "PackagePath": "staticwebassets\\assets\\img\\secondbookback.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_1.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_1.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\single_blog_1.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_2.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_2.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\single_blog_2.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_3.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_3.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\single_blog_3.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_4.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_4.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\single_blog_4.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_5.jpg.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\single_blog_5.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\single_blog_5.jpg.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\sliderimage1.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\sliderimage1.webp",
       "PackagePath": "staticwebassets\\assets\\img\\sliderimage1.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\sliderimage2.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\sliderimage2.webp",
       "PackagePath": "staticwebassets\\assets\\img\\sliderimage2.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\img\\sliderimage3.webp",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\sliderimage3.webp",
       "PackagePath": "staticwebassets\\assets\\img\\sliderimage3.webp"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\about.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\about.js",
       "PackagePath": "staticwebassets\\assets\\js\\about.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\blog.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\blog.js",
       "PackagePath": "staticwebassets\\assets\\js\\blog.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\blogdetails.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\blogdetails.js",
       "PackagePath": "staticwebassets\\assets\\js\\blogdetails.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\bookdetails.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\bookdetails.js",
       "PackagePath": "staticwebassets\\assets\\js\\bookdetails.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\cart.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\cart.js",
       "PackagePath": "staticwebassets\\assets\\js\\cart.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\categories.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\categories.js",
       "PackagePath": "staticwebassets\\assets\\js\\categories.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\checkout.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\checkout.js",
       "PackagePath": "staticwebassets\\assets\\js\\checkout.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\code.jquery.com_jquery-3.7.0.min.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\code.jquery.com_jquery-3.7.0.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\code.jquery.com_jquery-3.7.0.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\contact.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\contact.js",
       "PackagePath": "staticwebassets\\assets\\js\\contact.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\login.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\homepage(imageslider).js",
+      "PackagePath": "staticwebassets\\assets\\js\\homepage(imageslider).js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\login.js",
       "PackagePath": "staticwebassets\\assets\\js\\login.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\script.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\script.js",
       "PackagePath": "staticwebassets\\assets\\js\\script.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\js\\signup.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\signup.js",
       "PackagePath": "staticwebassets\\assets\\js\\signup.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\ajax-loader.gif",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\ajax-loader.gif",
       "PackagePath": "staticwebassets\\assets\\slick\\ajax-loader.gif"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\config.rb",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\config.rb",
       "PackagePath": "staticwebassets\\assets\\slick\\config.rb"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\fonts\\slick.eot",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\fonts\\slick.eot",
       "PackagePath": "staticwebassets\\assets\\slick\\fonts\\slick.eot"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\fonts\\slick.svg",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\fonts\\slick.svg",
       "PackagePath": "staticwebassets\\assets\\slick\\fonts\\slick.svg"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\fonts\\slick.ttf",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\fonts\\slick.ttf",
       "PackagePath": "staticwebassets\\assets\\slick\\fonts\\slick.ttf"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\fonts\\slick.woff",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\fonts\\slick.woff",
       "PackagePath": "staticwebassets\\assets\\slick\\fonts\\slick.woff"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\slick-theme.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\slick-theme.css",
       "PackagePath": "staticwebassets\\assets\\slick\\slick-theme.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\slick-theme.less",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\slick-theme.less",
       "PackagePath": "staticwebassets\\assets\\slick\\slick-theme.less"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\slick-theme.scss",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\slick-theme.scss",
       "PackagePath": "staticwebassets\\assets\\slick\\slick-theme.scss"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.css",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.css",
       "PackagePath": "staticwebassets\\assets\\slick\\slick.css"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.js",
       "PackagePath": "staticwebassets\\assets\\slick\\slick.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.less",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.less",
       "PackagePath": "staticwebassets\\assets\\slick\\slick.less"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.min.js",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.min.js",
       "PackagePath": "staticwebassets\\assets\\slick\\slick.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Downloads\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.scss",
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\slick\\slick.scss",
       "PackagePath": "staticwebassets\\assets\\slick\\slick.scss"
     },
     {

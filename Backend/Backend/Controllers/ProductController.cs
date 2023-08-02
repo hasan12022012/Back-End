@@ -59,26 +59,51 @@ namespace Backend.Controllers
 
         public async Task<IActionResult> Search(string search)
         {
-            ProductVM model = new();
+            ProductVM searchProduct = new();
 
-            if (true)
+            if (search != null)
             {
-
+                searchProduct.Products = await _appDbContext.Products
+                    .Where(m => !m.IsDeleted && m.Name.ToLower()
+                    .Contains(search.ToLower()) && !m.IsDeleted)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.Author)
+                    .ToListAsync();
+            }
+            else
+            {
+                searchProduct.Products = await _appDbContext.Products
+                    .Where(m => !m.IsDeleted)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.Author)
+                    .ToListAsync();
             }
 
-            List<Product> searchProduct = await _appDbContext.Products
-                .Where(m => m.Name.ToLower()
-                .Contains(search.ToLower()) && !m.IsDeleted)
-                .Include(m => m.ProductImages)
-                .Include(m => m.Author)
-                .ToListAsync();
+            return PartialView("_ProductsPartial", searchProduct);
+        }
 
-            ProductVM model = new()
+        public async Task<IActionResult> FilterPrice(int? min, int? max)
+        {
+            ProductVM filterProduct = new();
+
+            if (min != null && max != null)
             {
-                Products = searchProduct
-            };
+                filterProduct.Products = await _appDbContext.Products
+                    .Where(p => !p.IsDeleted && p.Price >= min && p.Price <= max)
+                    .Include(p => p.ProductImages)
+                    .Include(p => p.Author)
+                    .ToListAsync();
+            }
+            else
+            {
+                filterProduct.Products = await _appDbContext.Products
+                    .Where(m => !m.IsDeleted)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.Author)
+                    .ToListAsync();
+            }
 
-            return PartialView("_ProductsPartial", model);
+            return PartialView("_ProductsPartial", filterProduct);
         }
     }
 }

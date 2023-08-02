@@ -8,7 +8,7 @@ namespace Backend.Models
         public bool IsDeleted { get; set; }
         [StringLength(255)]
         public string? CreatedBy { get; set; }
-        public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         [StringLength(255)]
         public string? UpdatedBy { get; set; }
         public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
