@@ -20,109 +20,98 @@
     <div class="container">
         <div class="filtersettings">
             <div class="filterwindow">
-                <form action="">
-                    <div class="searchbar">
-                        <label for="search">
-                            <input type="text" id="search" placeholder="Search book by author or publisher">
-                            <i class="fa-sharp fa-solid fa-magnifying-glass" id="iconsearch"></i>
-                        </label>
-                    </div>
-                    <div class="filterbyprice">
-                        <h4>Filter by Price</h4>
-                        <div class="range">
-                            &nbsp;
-                            <div class="range-slider">
-                                <div class="progress"></div>
-                                <span class="range-min-wrapper">
-                                    <input class="range-min" onchange="postChange()" type="range" min="10" max="54" value="10">
-                                </span>
-                                <span class="range-max-wrapper">
-                                    <input class="range-max" onchange="postChange()" type="range" min="10" max="54" value="54">
-                                </span>
+                <div class="searchbar">
+                    <label for="search">
+                        <input type="text" id="search" placeholder="Search book by author or publisher">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass" id="iconsearch"></i>
+                    </label>
+                </div>
+                <div class="filterbyprice">
+                    <h4>Filter by Price</h4>
+                    <div class="range">
+                        &nbsp;
+                        <div class="range-slider">
+                            <div class="progress"></div>
+                            <span class="range-min-wrapper">
+                                <input class="range-min" onchange="postChange()" type="range" min="10" max="54" value="10">
+                            </span>
+                            <span class="range-max-wrapper">
+                                <input class="range-max" onchange="postChange()" type="range" min="10" max="54" value="54">
+                            </span>
+                        </div>
+                        &nbsp;
+                        <div class="rangeview">
+                            <div class="min-value numberVal">
+                                <input type="number" onkeyup="postChange()" class="min" min="10" max="54" value="10" disabled>
                             </div>
-                            &nbsp;
-                            <div class="rangeview">
-                                <div class="min-value numberVal">
-                                    <input type="number" onkeyup="postChange()" class="min" min="10" max="54" value="10" disabled>
-                                </div>
-                                <span>to</span> 
-                                <div class="max-value numberVal">
-                                    <input type="number" onkeyup="postChange()" class="border text-center max" min="10" max="54" value="54"
-                                           disabled>
-                                </div>
+                            <span>to</span>
+                            <div class="max-value numberVal">
+                                <input type="number" onkeyup="postChange()" class="border text-center max" min="10" max="54" value="54"
+                                       disabled>
                             </div>
                         </div>
                     </div>
-                    <div class="filterbyrating">
-                        <div class="select-btn">
-                            <span class="sBtn-text">Filter by Rating</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
+                </div>
+                <div class="filterbyrating">
+                    <div class="select-btn">
+                        <span class="sBtn-text">Filter by Rating</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
 
-                        <ul class="options">
-                            <li class="option">
-                                <span class="option-text">5 Star Rating</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">4 Star Rating</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">3 Star Rating</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">2 Star Rating</span>
-                            </li>
-                            <li class="option">
-                                <span class="option-text">1 Star Rating</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="filterbygenres">
-                        <h4>Filter by Genres</h4>
-                        @foreach (var genre in Model.Genres)
-                        {
-                            <label for="">
-                                <input type="checkbox">
-                                @genre.Name
-                            </label>
-                        }
-                    </div>
-                    <div class="filterauthorname">
-                        <h4>Filter by Author Name</h4>
-                        @foreach (var author in Model.Authors)
-                        {
-                            <label for="">
-                                <input type="checkbox">
-                                @author.Name
-                            </label>
-                        }
-                    </div>
-                    <button class="submit-btn">
-                        <h1>Submit</h1>
-                    </button></a>
-                </form>
+                    <ul class="options">
+                        <li class="option">
+                            <span class="option-text">5 Star Rating</span>
+                        </li>
+                        <li class="option">
+                            <span class="option-text">4 Star Rating</span>
+                        </li>
+                        <li class="option">
+                            <span class="option-text">3 Star Rating</span>
+                        </li>
+                        <li class="option">
+                            <span class="option-text">2 Star Rating</span>
+                        </li>
+                        <li class="option">
+                            <span class="option-text">1 Star Rating</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filterbygenres">
+                    <h4>Filter by Genres</h4>
+                    @foreach (var genre in Model.Genres)
+                    {
+                        <p style="cursor: pointer;" class="filter-genre" genre-id="@genre.Id">@genre.Name (@genre.ProductGenres.Count)</p>
+                    }
+                </div>
+                <div class="filterauthorname">
+                    <h4>Filter by Author Name</h4>
+                    @foreach (var author in Model.Authors)
+                    {
+                        <p style="cursor: pointer;" class="filter-author" author-id="@author.Id">@author.Name (@author.Products.Count)</p>
+                    }
+                </div>
             </div>
             <div class="browsemenu">
-                <div class="browse-by-popularity">
+                <div class="browse-by-popularity" style="z-index: 999;">
                     <div class="browse-by-popularity-btn">
-                        <span class="sBrowse-by-popularity-btn-text">Browse by popularity</span>
+                        <span class="sBrowse-by-popularity-btn-text">Name</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <ul class="browse-by-popularities">
-                        <li class="browse_list">
-                            <span class="browse-text">Browse by popularity</span>
-                        </li>
-                        <li class="browse_list">
+                        <li class="browse_list name">
                             <span class="browse-text">Name</span>
                         </li>
-                        <li class="browse_list">
+                        <li class="browse_list new">
                             <span class="browse-text">NEW</span>
                         </li>
-                        <li class="browse_list">
+                        <li class="browse_list old">
                             <span class="browse-text">Old</span>
                         </li>
-                        <li class="browse_list">
-                            <span class="browse-text">Price</span>
+                        <li class="browse_list low">
+                            <span class="browse-text">$ Low to High</span>
+                        </li>
+                        <li class="browse_list high">
+                            <span class="browse-text">$ High to Low</span>
                         </li>
                     </ul>
                 </div>
@@ -166,7 +155,6 @@
 @section Scripts{
     <script src="~/assets/js/categories.js"></script>
 }
-
 
 <script>
     function postChange() {

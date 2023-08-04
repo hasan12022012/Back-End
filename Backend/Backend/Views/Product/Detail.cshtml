@@ -18,6 +18,7 @@
                 <div class="captions">
                     <h3>@Model.Product.Name</h3>
                     <p>By @Model.Product.Author.Name</p>
+                    <p>@Model.Product.ProductGenres.FirstOrDefault().Genre.Name</p>
                     <span>$@Model.Product.Price</span>
                     <div class="ratedegree">
                         <div>
