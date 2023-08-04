@@ -27,5 +27,7 @@ namespace Backend.DataAccessLayer
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Banner> Banners { get; set; }
         public DbSet<About> Abouts { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<BlogTag> BlogTags { get; set; }
     }
 }

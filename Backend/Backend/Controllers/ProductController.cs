@@ -19,6 +19,7 @@ namespace Backend.Controllers
         {
             IEnumerable<Product> products = await _appDbContext.Products
                 .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductGenres)  
                 .Include(m => m.ProductImages)
                 .Include(m => m.Author)
                 .ToListAsync();
@@ -29,6 +30,7 @@ namespace Backend.Controllers
 
             IEnumerable<Author> authors = await _appDbContext.Authors
                 .Where(m => !m.IsDeleted)
+                .Include(m => m.Products)
                 .ToListAsync();
 
             ProductVM model = new()
@@ -45,6 +47,8 @@ namespace Backend.Controllers
         {
             Product product = await _appDbContext.Products
                 .Where(m => !m.IsDeleted && m.Id == id)
+                .Include(m => m.ProductGenres)
+                .ThenInclude(m => m.Genre)
                 .Include(m => m.ProductImages)
                 .Include(m => m.Author)
                 .FirstOrDefaultAsync();
@@ -66,6 +70,7 @@ namespace Backend.Controllers
                 searchProduct.Products = await _appDbContext.Products
                     .Where(m => !m.IsDeleted && m.Name.ToLower()
                     .Contains(search.ToLower()) && !m.IsDeleted)
+                     .Include(m => m.ProductGenres)
                     .Include(m => m.ProductImages)
                     .Include(m => m.Author)
                     .ToListAsync();
@@ -74,12 +79,67 @@ namespace Backend.Controllers
             {
                 searchProduct.Products = await _appDbContext.Products
                     .Where(m => !m.IsDeleted)
+                    .Include(m => m.ProductGenres)
                     .Include(m => m.ProductImages)
                     .Include(m => m.Author)
                     .ToListAsync();
             }
 
             return PartialView("_ProductsPartial", searchProduct);
+        }
+
+        public async Task<IActionResult> FilterGenre(int id)
+        {
+            ProductVM model = new();
+
+            if (id != null)
+            {
+                model.Products = await _appDbContext.Products
+                    .Where(m => !m.IsDeleted && m.ProductGenres
+                    .Where(m => m.GenreId == id)
+                    .FirstOrDefault().GenreId == id)
+                    .Include(m => m.ProductGenres)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.Author)
+                    .ToListAsync();
+            }
+            else
+            {
+                model.Products = await _appDbContext.Products
+                    .Where(m => !m.IsDeleted)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.ProductGenres)
+                    .Include(m => m.Author)
+                    .ToListAsync();
+            }
+
+            return PartialView("_ProductsPartial", model);
+        }
+
+        public async Task<IActionResult> FilterAuthor(int id)
+        {
+            ProductVM model = new();
+
+            if (id != null)
+            {
+                model.Products = await _appDbContext.Products
+                    .Where(m => !m.IsDeleted && m.AuthorId == id)
+                    .Include(m => m.ProductGenres)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.Author)
+                    .ToListAsync();
+            }
+            else
+            {
+                model.Products = await _appDbContext.Products
+                    .Where(m => !m.IsDeleted)
+                    .Include(m => m.ProductImages)
+                    .Include(m => m.ProductGenres)
+                    .Include(m => m.Author)
+                    .ToListAsync();
+            }
+
+            return PartialView("_ProductsPartial", model);
         }
 
         public async Task<IActionResult> FilterPrice(int? min, int? max)
@@ -90,6 +150,7 @@ namespace Backend.Controllers
             {
                 filterProduct.Products = await _appDbContext.Products
                     .Where(p => !p.IsDeleted && p.Price >= min && p.Price <= max)
+                    .Include(m => m.ProductGenres)
                     .Include(p => p.ProductImages)
                     .Include(p => p.Author)
                     .ToListAsync();
@@ -98,6 +159,7 @@ namespace Backend.Controllers
             {
                 filterProduct.Products = await _appDbContext.Products
                     .Where(m => !m.IsDeleted)
+                    .Include(m => m.ProductGenres)
                     .Include(m => m.ProductImages)
                     .Include(m => m.Author)
                     .ToListAsync();
@@ -105,5 +167,85 @@ namespace Backend.Controllers
 
             return PartialView("_ProductsPartial", filterProduct);
         }
+
+        public async Task<IActionResult> SortName()
+        {
+            IEnumerable<Product> products = await _appDbContext.Products
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductGenres)
+                .Include(m => m.ProductImages)
+                .Include(m => m.Author)
+                .OrderBy(m => m.Name)
+                .ToListAsync();
+
+            ProductVM model = new();
+            model.Products = products;
+
+            return PartialView("_ProductsPartial", model);
+        }
+
+        public async Task<IActionResult> SortOld()
+        {
+            IEnumerable<Product> products = await _appDbContext.Products
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductGenres)
+                .Include(m => m.ProductImages)
+                .Include(m => m.Author)
+                .OrderBy(m => m.Id)
+                .ToListAsync();
+
+            ProductVM model = new();
+            model.Products = products;
+
+            return PartialView("_ProductsPartial", model);
+        }
+
+        public async Task<IActionResult> SortNew()
+        {
+            IEnumerable<Product> products = await _appDbContext.Products
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductGenres)
+                .Include(m => m.ProductImages)
+                .Include(m => m.Author)
+                .OrderByDescending(m => m.Id)
+                .ToListAsync();
+
+            ProductVM model = new();
+            model.Products = products;
+
+            return PartialView("_ProductsPartial", model);
+        }
+
+        public async Task<IActionResult> SortLow()
+        {
+            IEnumerable<Product> products = await _appDbContext.Products
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductGenres)
+                .Include(m => m.ProductImages)
+                .Include(m => m.Author)
+                .OrderBy(m => m.Price)
+                .ToListAsync();
+
+            ProductVM model = new();
+            model.Products = products;
+
+            return PartialView("_ProductsPartial", model);
+        }
+
+        public async Task<IActionResult> SortHigh()
+        {
+            IEnumerable<Product> products = await _appDbContext.Products
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductGenres)
+                .Include(m => m.ProductImages)
+                .Include(m => m.Author)
+                .OrderByDescending(m => m.Price)
+                .ToListAsync();
+
+            ProductVM model = new();
+            model.Products = products;
+
+            return PartialView("_ProductsPartial", model);
+        }   
     }
 }
