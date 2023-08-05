@@ -260,6 +260,7 @@ header {
                 cursor: pointer;
                 transition: color 0.4s linear;
                 overflow: hidden;
+                padding-top:5px;
             }
 
                 .imageslider .container .slideshow-container .slideshow-inner .mySlides .slide-text a .browse-store-btn h1 {

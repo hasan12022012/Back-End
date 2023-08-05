@@ -603,6 +603,7 @@
     cursor: pointer;
     transition: color 0.4s linear;
     overflow: hidden;
+    padding-top:5px;
 }
 
 .book-shop-area .container .filtersettings .browsemenu .browsebtn a .browsemorebtn h1 {
