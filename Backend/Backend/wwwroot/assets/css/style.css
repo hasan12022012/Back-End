@@ -11,15 +11,14 @@ ul {
 }
 
 .container {
-    width: 1320px;
+    max-width: 1320px;
     margin: auto;
 }
 
 /* header css start/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 header {
     background: #FEF4F4;
-    z-index: 990;
-    top: 0;
+    z-index: 999;
 }
 
     header .container .head-content {
@@ -93,6 +92,7 @@ header {
                 cursor: pointer;
                 transition: color 0.4s linear;
                 overflow: hidden;
+                padding-top:5px;
             }
 
             header .container .head-content .list ul li a .signinbtn h1 {
@@ -598,7 +598,7 @@ header {
             display: flex;
             align-items: center;
             padding-left: 80px;
-            padding-top: 30px;
+            padding-top: 80px;
         }
 
             .featuredthisweek .container .detailscard .bookdetails .captions {
@@ -669,6 +669,7 @@ header {
                         cursor: pointer;
                         transition: color 0.4s linear;
                         overflow: hidden;
+                        padding-top:5px;
                     }
 
                     .featuredthisweek .container .detailscard .bookdetails .captions a .viewdetailsbtn h1 {
@@ -883,6 +884,7 @@ header {
                 cursor: pointer;
                 transition: color 0.4s linear;
                 overflow: hidden;
+                padding-top:5px;
             }
 
             .latestpublisheditems .container .browsebtn a .browsemorebtn h1 {
@@ -982,6 +984,7 @@ header {
                     cursor: pointer;
                     transition: color 0.4s linear;
                     overflow: hidden;
+                    padding-top:5px;
                 }
 
                 .advertisement .container .bookpicture .firstbook a .detailsbtn h1 {
@@ -1060,6 +1063,7 @@ header {
                     cursor: pointer;
                     transition: color 0.4s linear;
                     overflow: hidden;
+                    padding-top: 5px;
                 }
 
                 .advertisement .container .bookpicture .secondbook a .detailsbtn h1 {
@@ -1180,6 +1184,7 @@ header {
                     cursor: pointer;
                     transition: color 0.4s linear;
                     overflow: hidden;
+                    padding-top: 5px;
                 }
 
                 .joinnewsletter .container .sub form a .subscribe-btn h1 {

@@ -31,3 +31,54 @@ function headerScroll() {
 }
 
 headerScroll();
+
+
+
+$(document).ready(function () {
+    $(document).on("keyup", "#search", function () {
+        let inputVal = $(this).val().trim();
+        $(".news .blog-list").slice(0).remove();
+        $.ajax({
+            url: "blog/search",
+            type: "Get",
+            contentType: "application/x-www-form-urlencoded",
+            data: {
+                search: inputVal
+            },
+
+            success: function (res) {
+                $(".news").append(res);
+            }
+        });
+    });
+
+    $('.filter-tag').on('click', function (e) {
+        let tagId = $(this).attr('tag-id');
+
+        $(".news .blog-list").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "blog/filtertag",
+            data: { id: tagId },
+            success: function (res) {
+                $('.news').append(res);
+            },
+        });
+    });
+
+    $('.filter-category').on('click', function (e) {
+        let categoryId = $(this).attr('category-id');
+
+        $(".news .blog-list").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "blog/filtercategory",
+            data: { id: categoryId },
+            success: function (res) {
+                $('.news').append(res);
+            },
+        });
+    });
+});

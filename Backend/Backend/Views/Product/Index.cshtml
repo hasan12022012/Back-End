@@ -76,7 +76,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="filterbygenres">
+                <div class="filterbygenres" style="margin-top:30px;">
                     <h4>Filter by Genres</h4>
                     @foreach (var genre in Model.Genres)
                     {
@@ -92,7 +92,7 @@
                 </div>
             </div>
             <div class="browsemenu">
-                <div class="browse-by-popularity" style="z-index: 999;">
+                <div class="browse-by-popularity" style="z-index: 10;">
                     <div class="browse-by-popularity-btn">
                         <span class="sBrowse-by-popularity-btn-text">Name</span>
                         <i class="fa-solid fa-chevron-down"></i>
@@ -115,8 +115,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="books">
-                    <ul class="carousel row" style="padding-left: 20px; justify-content: flex-start;">
+                <div class="books" style="margin-left:20px;">
+                    <ul class="carousel row " style="margin-right:25px;">
                         <partial name="_ProductsPartial" />
                     </ul>
                 </div>

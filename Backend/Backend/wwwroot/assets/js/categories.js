@@ -35,6 +35,97 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('.filter-genre').on('click', function (e) {
+        let genreId = $(this).attr('genre-id');
+
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/filtergenre",
+            data: { id: genreId },
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.filter-author').on('click', function (e) {
+        let authorId = $(this).attr('author-id');
+
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/filterauthor",
+            data: { id: authorId },
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.name').on('click', function () {
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/sortname",
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.old').on('click', function () {
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/sortold",
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.new').on('click', function () {
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/sortnew",
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.low').on('click', function () {
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/sortlow",
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+
+    $('.high').on('click', function () {
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/sorthigh",
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
 })
 
 
