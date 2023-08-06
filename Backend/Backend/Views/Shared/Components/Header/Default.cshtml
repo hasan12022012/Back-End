@@ -21,16 +21,43 @@
                 <li class="sup">
                     <a asp-controller="Basket" asp-action="Index">
                         <img src="~/assets/img/cart.svg" alt="">
-                        <sup>0</sup>
+                        <sup id="basketCount">@Model.Count</sup>
+                        <sup style="display: none;" id="basketCount2">@Model.Count</sup>
                     </a>
                 </li>
-                <li>
-                    <a asp-controller="Account" asp-action="Login">
-                        <button class="signinbtn">
-                            <h1>Sign in</h1>
-                        </button>
-                    </a>
-                </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    <li>
+                        <h5>@User.Identity.Name</h5>
+                    </li>
+
+                    <li>
+                        <a asp-controller="Account" asp-action="ChangePassword">
+                            <button class="signinbtn">
+                                <h1>Change password</h1>
+                            </button>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-controller="Account" asp-action="Logout">
+                            <button class="signinbtn">
+                                <h1>Sign out</h1>
+                            </button>
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <a asp-controller="Account" asp-action="Login">
+                            <button class="signinbtn">
+                                <h1>Sign in</h1>
+                            </button>
+                        </a>
+                    </li>
+                }
             </ul>
         </div>
     </div>

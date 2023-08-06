@@ -1,4 +1,6 @@
-﻿@{
+﻿@model LoginVM
+
+@{
     Layout = null;
 }
 
@@ -21,27 +23,22 @@
                     <span>Login</span>
                     <p>Enter Login details to get access</p>
                 </div>
-                <form action="#">
-                    <label for="usernameOremail">Username Or Email Address</label>
-                    <input type="text"
-                           placeholder="Username / Email address"
-                           required="required" />
+                <form asp-action="Login" method="post">
+                    <label asp-for="UsernameOrEmail">Username Or Email Address</label>
+                    <input asp-for="UsernameOrEmail" placeholder="Username / Email address" />
+                    <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
 
-                    <label for="password">Password</label>
-                    <input type="password"
-                           placeholder="Enter Password"
-                           required="required"
-                           name="password"
-                           autocomplete="current-password"
-                           id="id_password" />
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" placeholder="Enter Password" id="id_password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
                     <i class="far fa-eye"
                        id="togglePassword"
                        style="margin-left: -30px; cursor: pointer"></i>
 
                     <div class="keepme">
-                        <input type="checkbox" class="check" required="required" />
+                        <input type="checkbox" class="check" />
                         <label for="">Keep Me Logged In</label>
-                        <a href="">Forgot Password?</a>
+                        <a asp-action="ForgetPassword">Forgot Password?</a>
                     </div>
                     <div class="loginfoot">
                         <p>
@@ -54,6 +51,8 @@
         </div>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/assets/js/login.js"></script>
 </body>
 </html>

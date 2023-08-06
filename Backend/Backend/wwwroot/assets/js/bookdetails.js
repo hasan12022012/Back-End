@@ -10,8 +10,30 @@ $(document).ready(function () {
 
         $(this).addClass('current');
         $("#" + tab_id).addClass('current');
-    })
+    });
 
+    $(document).on("click", "#addToCart", function () {
+        let id = $(this).attr('cart-id');
+        let basketCount = $("#basketCount")
+        let basketCurrentCount = $("#basketCount")
+        $.ajax({
+            method: "Post",
+            url: "/basket/addbasket",
+            data: {
+                id: id
+            },
+            content: "application/x-www-from-urlencoded",
+            success: function () {
+                let scrollBasket = $('#basketCount2');
+                let scrollBasketCount = $(scrollBasket).text();
+                scrollBasketCount++;
+                $(scrollBasket).text(scrollBasketCount);
+                basketCurrentCount = scrollBasketCount;
+                basketCount.html("")
+                basketCount.append(basketCurrentCount)
+            }
+        });
+    });
 })
 
 
@@ -20,17 +42,17 @@ $(document).ready(function () {
 // back-to-top js start///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var btn = $('#back-to-top');
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+    } else {
+        btn.removeClass('show');
+    }
 });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+btn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
 });
 // back-to-top js end///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -62,17 +84,17 @@ stars.forEach((star, index1) => {
 
 
 function headerScroll() {
-  window.addEventListener("scroll", function () {
-      var header = document.querySelector("header");
-      var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-      if (scrollPosition > 80) {
-          header.style.position = "fixed";
-          header.style.width = "100%";
-      } else {
-          header.style.position = "static";
-          header.style.width = "auto";
-      }
-  });
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        if (scrollPosition > 80) {
+            header.style.position = "fixed";
+            header.style.width = "100%";
+        } else {
+            header.style.position = "static";
+            header.style.width = "auto";
+        }
+    });
 }
 
 headerScroll();

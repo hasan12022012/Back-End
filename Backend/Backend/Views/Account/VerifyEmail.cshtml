@@ -1,1 +1,47 @@
-﻿
+﻿@model ConfirmAccountVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/assets/css/login.css" />
+    <title>Login</title>
+</head>
+<body>
+    <section class="login">
+        <div class="container">
+            <div class="window">
+                <div class="loginhead">
+                    <span>Confirm Email</span>
+                    <p>Enter OTP to get access</p>
+                </div>
+                <form asp-action="ConfirmEmail" method="post" enctype="multipart/form-data">
+                    <label for="usernameOremail">OTP</label>
+                    <input asp-for="OTP" placeholder="OTP" />
+                    <span style="display: block;" class="text-danger">@TempData["Error"]</span>
+                    <input type="hidden" asp-for="Email">
+                    <div class="loginfoot">
+                        <button>Confirm</button>
+                    </div>
+                    <form asp-action="ResendOTP" asp-route-email="@Model.Email">
+                        <p class="sign-up">
+                            OTP still not reached you?
+                        </p>
+                        <button class="a">Resend</button>
+                    </form>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/assets/js/login.js"></script>
+</body>
+</html>

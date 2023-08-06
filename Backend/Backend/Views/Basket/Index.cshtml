@@ -26,38 +26,25 @@
                 <h4>Total</h4>
             </div>
         </div>
-        <div class="about-of-product">
-            <div class="img-of-product">
-                <img src="~/assets/img/best-books1.jpg.webp" alt="">
-                <h3>Minimalistic shop for multipurpose use</h3>
-            </div>
-            <div class="price-of-product">
-                <h4>$360.00</h4>
-                <div class="quantity-product">
-                    <input type="button" class="dcrbtn" onclick="decrementValue()" value="-" />
-                    <input type="text" class="number" name="quantity" value="1" maxlength="2" max="10" size="1"
-                           id="number" />
-                    <input type="button" class="incbtn" onclick="incrementValue()" value="+" />
+        @foreach (var item in collection)
+        {
+            <div class="about-of-product">
+                <div class="img-of-product">
+                    <img src="~/assets/img/best-books1.jpg.webp" alt="">
+                    <h3>Minimalistic shop for multipurpose use</h3>
                 </div>
-                <h4>$720.00</h4>
-            </div>
-        </div>
-        <div class="about-of-product">
-            <div class="img-of-product">
-                <img src="~/assets/img/best_selling1.jpg.webp" alt="">
-                <h3>Minimalistic shop for multipurpose use</h3>
-            </div>
-            <div class="price-of-product">
-                <h4>$360.00</h4>
-                <div class="quantity-product">
-                    <input type="button" class="dcrbtn" onclick="decrementValuebtn()" value="-" />
-                    <input type="text" class="number" name="quantity" value="1" maxlength="2" max="10" size="1"
+                <div class="price-of-product">
+                    <h4>$360.00</h4>
+                    <div class="quantity-product">
+                        <input type="button" class="dcrbtn" onclick="decrementValue()" value="-" />
+                        <input type="text" class="number" name="quantity" value="1" maxlength="2" max="10" size="1"
                            id="number" />
-                    <input type="button" class="incbtn" onclick="incrementValuebtn()" value="+" />
+                        <input type="button" class="incbtn" onclick="incrementValue()" value="+" />
+                    </div>
+                    <h4>$720.00</h4>
                 </div>
-                <h4>$720.00</h4>
             </div>
-        </div>
+        }
         <div class="subtotal">
             <h5 class="subtotal-price">Subtotal</h5>
             <h5>$2160.00</h5>

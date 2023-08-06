@@ -3,11 +3,10 @@ using Backend.Helpers.Enums;
 using Backend.Models;
 using Backend.Services.Interfaces;
 using Backend.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Online_Shop___BackEnd.Controllers
+namespace Backend.Controllers
 {
     public class AccountController : Controller
     {
@@ -295,7 +294,7 @@ namespace Online_Shop___BackEnd.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [Authorize(Roles = "SuperAdmin")]
+        //[Authorize(Roles = "SuperAdmin")]
         public async Task CreateRoles()
         {
             foreach (var role in Enum.GetValues(typeof(Roles)))
