@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1zAhR5Qip4ZRTPnWznbZkLqEeSBbvwLx+cXnK1CqW/c=",
+  "Hash": "Yv8gHOa9HEHEaayrCyWjf6yIhjlfrepbXrl6rM4c9jU=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Backend.styles.css",
-      "SourceId": "Backend",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/Backend",
-      "RelativePath": "Backend.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Backend.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Backend.bundle.scp.css",
-      "SourceId": "Backend",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/Backend",
-      "RelativePath": "Backend.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Backend.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\css\\about.css",
       "SourceId": "Backend",
@@ -1426,6 +1392,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\slick\\slick-theme.scss"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\templates\\ForgetPasswordVerify.html",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "assets/templates/ForgetPasswordVerify.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\templates\\ForgetPasswordVerify.html"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\templates\\verify.html",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "assets/templates/verify.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\templates\\verify.html"
     }
   ]
 }

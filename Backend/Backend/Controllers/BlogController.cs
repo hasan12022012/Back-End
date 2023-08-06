@@ -15,32 +15,62 @@ namespace Backend.Controllers
             _appDbContext = appDbContext;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            IEnumerable<Blog> blogs = await _appDbContext.Blogs
-                .Where(m => !m.IsDeleted)
-                .Include(m => m.BlogTags)
-                .Include(m => m.BlogCategory)
-                .OrderByDescending(m => m.Id)
-                .ToListAsync();
-
-            IEnumerable<BlogCategory> blogCategories = await _appDbContext.BlogCategories
-                .Where(m => !m.IsDeleted)
-                .Include(m => m.Blogs)
-                .ToListAsync();
-
-            IEnumerable<Tag> tags = await _appDbContext.Tags
-                .Where(m => !m.IsDeleted)
-                .ToListAsync();
-
-            BlogVM model = new()
+            if (id is null)
             {
-                Blogs = blogs,
-                BlogCategories = blogCategories,
-                Tags = tags
-            };
+                IEnumerable<Blog> blogs = await _appDbContext.Blogs
+    .Where(m => !m.IsDeleted)
+    .Include(m => m.BlogTags)
+    .Include(m => m.BlogCategory)
+    .OrderByDescending(m => m.Id)
+    .ToListAsync();
 
-            return View(model);
+                IEnumerable<BlogCategory> blogCategories = await _appDbContext.BlogCategories
+                    .Where(m => !m.IsDeleted)
+                    .Include(m => m.Blogs)
+                    .ToListAsync();
+
+                IEnumerable<Tag> tags = await _appDbContext.Tags
+                    .Where(m => !m.IsDeleted)
+                    .ToListAsync();
+
+                BlogVM model = new()
+                {
+                    Blogs = blogs,
+                    BlogCategories = blogCategories,
+                    Tags = tags
+                };
+
+                return View(model);
+            }
+            else
+            {
+                IEnumerable<Blog> blogs = await _appDbContext.Blogs
+    .Where(m => !m.IsDeleted && m.BlogCategoryId == id)
+    .Include(m => m.BlogTags)
+    .Include(m => m.BlogCategory)
+    .OrderByDescending(m => m.Id)
+    .ToListAsync();
+
+                IEnumerable<BlogCategory> blogCategories = await _appDbContext.BlogCategories
+                    .Where(m => !m.IsDeleted)
+                    .Include(m => m.Blogs)
+                    .ToListAsync();
+
+                IEnumerable<Tag> tags = await _appDbContext.Tags
+                    .Where(m => !m.IsDeleted)
+                    .ToListAsync();
+
+                BlogVM model = new()
+                {
+                    Blogs = blogs,
+                    BlogCategories = blogCategories,
+                    Tags = tags
+                };
+
+                return View(model);
+            }
         }
 
         public async Task<IActionResult> Search(string search)
@@ -118,9 +148,38 @@ namespace Backend.Controllers
             return PartialView("_BlogsPartial", model);
         }
 
-        public IActionResult Detail()
+        public async Task<IActionResult> Detail(int id)
         {
-            return View();
+            IEnumerable<Blog> blogs = await _appDbContext.Blogs
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.BlogTags)
+                .Include(m => m.BlogCategory)
+                .OrderByDescending(m => m.Id)
+                .ToListAsync();
+
+            IEnumerable<BlogCategory> blogCategories = await _appDbContext.BlogCategories
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.Blogs)
+                .ToListAsync();
+
+            IEnumerable<Tag> tags = await _appDbContext.Tags
+                .Where(m => !m.IsDeleted)
+                .ToListAsync();
+
+            Blog blog = await _appDbContext.Blogs
+                .Where(m => !m.IsDeleted && m.Id == id)
+                .Include(m => m.BlogTags)
+                .ThenInclude(m => m.Tag)
+                .Include(m => m.BlogCategory)
+                .FirstOrDefaultAsync();
+
+            BlogVM model = new();
+            model.Blog = blog;
+            model.Blogs = blogs;
+            model.Tags = tags;
+            model.BlogCategories = blogCategories;
+
+            return View(model);
         }
     }
 }

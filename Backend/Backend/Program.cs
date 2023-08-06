@@ -1,6 +1,8 @@
 using Backend.DataAccessLayer;
 using Backend.Models;
 using Backend.Services;
+using Backend.Services.Implementations;
+using Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -35,6 +37,8 @@ builder.Services.Configure<IdentityOptions>(option =>
 });
 
 builder.Services.AddScoped<LayoutService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 var app = builder.Build();
 

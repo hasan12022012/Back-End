@@ -39,7 +39,7 @@ $(document).ready(function () {
         let inputVal = $(this).val().trim();
         $(".news .blog-list").slice(0).remove();
         $.ajax({
-            url: "blog/search",
+            url: "/blog/search",
             type: "Get",
             contentType: "application/x-www-form-urlencoded",
             data: {
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "get",
-            url: "blog/filtertag",
+            url: "/blog/filtertag",
             data: { id: tagId },
             success: function (res) {
                 $('.news').append(res);
@@ -74,7 +74,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "get",
-            url: "blog/filtercategory",
+            url: "/blog/filtercategory",
             data: { id: categoryId },
             success: function (res) {
                 $('.news').append(res);

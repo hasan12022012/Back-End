@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Index";
 }
+@model ContactVM
 
 @section Links{
     <link rel="stylesheet" href="~/assets/css/contact.css">
@@ -26,14 +27,14 @@
     <div class="container">
         <div class="get-in-touch-section-content">
             <div class="getintouch">
-                <form action="">
+                <form asp-controller="Contact" asp-action="Index" method="post">
                     <h2>Get in Touch</h2>
-                    <textarea name="" id="" placeholder="Enter Message" required="required"></textarea>
+                    <textarea asp-for="@Model.Contact.Message" name="" id="" placeholder="Enter Message" required="required"></textarea>
                     <div>
-                        <input type="text" placeholder="Enter Your Name" required="required" />
-                        <input type="text" placeholder="Enter Your Email" required="required" id="entermail" />
+                        <input asp-for="@Model.Contact.Name" type="text" placeholder="Enter Your Name" required="required" />
+                        <input asp-for="@Model.Contact.Email" type="text" placeholder="Enter Your Email" required="required" id="entermail" />
                     </div>
-                    <input type="text" placeholder="Enter Subject" required="required" id="subject" />
+                    <input asp-for="@Model.Contact.Subject" type="text" placeholder="Enter Subject" required="required" id="subject" />
                     <div class="send">
                         <button>Send</button>
                     </div>
@@ -41,17 +42,17 @@
                 <div class="contactus">
                     <div class="address">
                         <i class="fa-solid fa-location-dot"></i>
-                        <h1>Buttonwood, California.</h1>
-                        <p>Rosemead, CA 91770</p>
+                        <h1>@Html.Raw(Model.Settings?["Country"])</h1>
+                        <p>@Html.Raw(Model.Settings?["Street"])</p>
                     </div>
                     <div class="phone">
                         <i class="fa-solid fa-phone"></i>
-                        <h1>+1 253 565 2365</h1>
-                        <p>Mon to Fri 9am to 6pm</p>
+                        <h1>@Html.Raw(Model.Settings?["PhoneNumber"])</h1>
+                        <p>@Html.Raw(Model.Settings?["WorkTime"])</p>
                     </div>
                     <div class="email">
                         <i class="fa-solid fa-envelope"></i>
-                        <h1>support@colorlib.com</h1>
+                        <h1>@Html.Raw(Model.Settings?["Email"])</h1>
                         <p>Send us your query anytime!</p>
                     </div>
                 </div>
