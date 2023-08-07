@@ -1,6 +1,5 @@
 ﻿using Online_Shop___BackEnd.ViewModels.BasketViewModels;
-
-namespace Backend.BasketViewModels
+namespace Backend.ViewModels
 {
     public class BasketIndexVM
     {

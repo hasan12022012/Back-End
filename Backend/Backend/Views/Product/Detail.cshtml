@@ -1,7 +1,9 @@
-﻿@model ProductVM
+﻿@model Product
 
 @{
     ViewData["Title"] = "Detail";
+    Product product = ViewBag.Product;
+    List<Rating> ratings = ViewBag.Ratings;
 }
 
 @section Links{
@@ -13,24 +15,19 @@
         <div class="detailscard">
             <div class="bookdetails">
                 <div class="bookimg">
-                    <img src="~/assets/img/@Model.Product.ProductImages.FirstOrDefault(m => m.IsMain).Name" alt="">
+                    <img src="~/assets/img/@Model.ProductImages.FirstOrDefault(m => m.IsMain).Name" alt="">
                 </div>
                 <div class="captions">
-                    <h3>@Model.Product.Name</h3>
-                    <p>By @Model.Product.Author.Name</p>
-                    <p>@Model.Product.ProductGenres.FirstOrDefault().Genre.Name</p>
-                    <span>$@Model.Product.Price</span>
+                    <h3>@Model.Name</h3>
+                    <p>By @Model.Author.Name</p>
+                    <p>@Model.ProductGenres.FirstOrDefault().Genre.Name</p>
+                    <span>$@Model.Price</span>
                     <div class="ratedegree">
                         <div>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
+                            @await Html.PartialAsync("_RatingPartial", ratings)
                         </div>
-                        <p>(120Review)</p>
                     </div>
-                    <a class="addtocartway" id="addToCart" cart-id="@Model.Product.Id">
+                    <a class="addtocartway" id="addToCart" cart-id="@Model.Id">
                         <button class="addtocartbtn">
                             <h1>Add To Cart</h1>
                         </button>
@@ -52,57 +49,44 @@
         </div>
         <div id="tab-1" class="tab-content current">
             <p>
-                @Model.Product.Description
+                @Model.Description
             </p>
         </div>
         <div id="tab-2" class="tab-content">
             <p>
-                @Model.Product.Author.About
+                @Model.Author.About
             </p>
         </div>
         <div id="tab-3" class="tab-content">
             <div class="comment-list">
-                <div class="thumb">
-                    <img src="~/assets/img/comment_1.png.webp" alt="">
-                </div>
                 <div class="desc">
-                    <p class="comment">
-                        Multiply sea night grass fourth day sea lesser rule open subdue female fill which
-                        them
-                        Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                    </p>
-                    <div class="name-date">
-                        <a href="">
-                            <h5>Emilly Blunt</h5>
-                        </a>
-                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                        <div class="starsreview">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
+                    @await Html.PartialAsync("_ProductCommentPartial", product)
+                </div>
+            </div>
+            <form asp-action="AddComment" asp-route-id="@Model.Id" method="post">
+                <div class="rating-box">
+                    <div class="stars">
+                        <i class="fa-solid fa-star" id="rate-it" onclick="fillStars(1)">
+                            <input asp-for="Comments.FirstOrDefault(c=>c.ProductId == Model.Id).Rating.Point" no-checked type="radio" value="1" style="display:none" />
+                        </i>
+                        <i class="fa-solid fa-star" id="rate-it" onclick="fillStars(2)">
+                            <input asp-for="Comments.FirstOrDefault(c=>c.ProductId == Model.Id).Rating.Point" no-checked type="radio" value="2" style="display:none" />
+                        </i>
+                        <i class="fa-solid fa-star" id="rate-it" onclick="fillStars(3)">
+                            <input asp-for="Comments.FirstOrDefault(c=>c.ProductId == Model.Id).Rating.Point" no-checked type="radio" value="3" style="display:none" />
+                        </i>
+                        <i class="fa-solid fa-star" id="rate-it" onclick="fillStars(4)">
+                            <input asp-for="Comments.FirstOrDefault(c=>c.ProductId == Model.Id).Rating.Point" no-checked type="radio" value="4" style="display:none" />
+                        </i>
+                        <i class="fa-solid fa-star" id="rate-it" onclick="fillStars(5)">
+                            <input asp-for="Comments.FirstOrDefault(c=>c.ProductId == Model.Id).Rating.Point" no-checked type="radio" value="5" style="display:none" />
+                        </i>
                     </div>
                 </div>
-            </div>
-            <div class="rating-box">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-            </div>
-            <form action="#">
-                <textarea name="" id="" placeholder="Comment" required="required"></textarea>
-                <div class="name-email">
-                    <input class="name" type="text" placeholder="Name">
-                    <input class="email" type="text" placeholder="Email">
-                </div>
+
+                <textarea asp-for="Comments.FirstOrDefault(cm => cm.Product.Id == Model.Id).Message" placeholder="Comment" required="required"></textarea>
                 <div class="post-review">
-                    <button>Post Comment</button>
+                    <button class="post">Post Comment</button>
                 </div>
             </form>
         </div>
@@ -131,3 +115,24 @@
 @section Scripts{
     <script src="~/assets/js/bookdetails.js"></script>
 }
+
+<script>
+    function fillStars(rating) {
+        const stars = document.querySelectorAll('#rate-it');
+        stars.forEach((star, i) => {
+            star.addEventListener("click", function () {
+                star.firstElementChild.click();
+                let currentStar = i + 1;
+                stars.forEach((star, j) => {
+                    if (currentStar >= j + 1) {
+                        star.classList.add("active");
+                        star.style.color = "#FEC006";
+                    } else {
+                        star.classList.remove("active");
+                        star.style.color = "lightgray";
+                    }
+                });
+            })
+        });
+    }
+</script>

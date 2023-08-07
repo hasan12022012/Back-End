@@ -1,4 +1,4 @@
-﻿namespace Online_Shop___BackEnd.ViewModels.BasketViewModels
+﻿namespace Backend.ViewModels
 {
     public class BasketProductVM
     {

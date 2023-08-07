@@ -1,0 +1,36 @@
+﻿@model Product
+
+@foreach (var comment in Model.Comments)
+{
+    <div>
+        <p class="comment">
+            @comment.Message
+        </p>
+        <div class="name-date">
+            <a href="">
+                <h5>@comment.AppUser.UserName</h5>
+            </a>
+            <p class="date">@comment.CreateDate.ToString("MMMM dd, yyyy at HH:mm:ss")</p>
+            <div class="starsreview">
+                @{
+                    double rating = comment.Rating.Point;
+                }
+                @for (int i = 0; i <= 5; i++)
+                {
+                    if (i <= rating)
+                    {
+                        <i class="fa-solid fa-star" style="color: #FEC006;"></i>
+                    }
+                    else
+                    {
+                        <i class="fa-solid fa-star" style="color: lightgray;"></i>
+                    }
+                }
+                @if (comment.AppUserId == ViewBag.UserId)
+                {
+                    <i comment-id="@comment.Id" class="fa-solid fa-trash" style="color: red; font-size: 25px; margin-left: 20px; cursor: pointer;"></i>
+                }
+            </div>
+        </div>
+    </div>
+}

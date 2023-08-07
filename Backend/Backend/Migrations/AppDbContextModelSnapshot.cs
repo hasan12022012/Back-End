@@ -612,7 +612,7 @@ namespace Backend.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<double>("Rating")
+                    b.Property<double?>("Rating")
                         .HasColumnType("float");
 
                     b.Property<DateTime?>("UpdatedAt")
