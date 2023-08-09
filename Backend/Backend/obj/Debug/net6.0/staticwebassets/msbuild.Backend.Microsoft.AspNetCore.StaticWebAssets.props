@@ -15728,6 +15728,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\152bed5b-2723-4766-951a-55c748567f8c_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/152bed5b-2723-4766-951a-55c748567f8c_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\152bed5b-2723-4766-951a-55c748567f8c_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))">
       <SourceType>Package</SourceType>
       <SourceId>Backend</SourceId>
@@ -15743,6 +15775,70 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\596a9fe0-54ae-449c-8f4a-9f5804c9446c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/596a9fe0-54ae-449c-8f4a-9f5804c9446c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\596a9fe0-54ae-449c-8f4a-9f5804c9446c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\7bdb4e22-4c4a-446b-80e9-02915e202a5b_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/7bdb4e22-4c4a-446b-80e9-02915e202a5b_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\7bdb4e22-4c4a-446b-80e9-02915e202a5b_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\88357311-e210-4d9c-b94f-097f59dbbecc_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/88357311-e210-4d9c-b94f-097f59dbbecc_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\88357311-e210-4d9c-b94f-097f59dbbecc_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\89f764eb-9427-4283-9871-74e70a5f6585_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/89f764eb-9427-4283-9871-74e70a5f6585_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\89f764eb-9427-4283-9871-74e70a5f6585_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\aboutbook.avif))">
       <SourceType>Package</SourceType>
@@ -15791,6 +15887,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\author.png.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\b5e8060d-9969-4143-b638-185d0e6320d2_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/b5e8060d-9969-4143-b638-185d0e6320d2_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\b5e8060d-9969-4143-b638-185d0e6320d2_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\best-books1.jpg.webp))">
       <SourceType>Package</SourceType>
@@ -16000,6 +16112,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\bookcategoryimgsection.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\c246fda1-3e84-4b6f-81d1-b83f1473664c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/c246fda1-3e84-4b6f-81d1-b83f1473664c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\c246fda1-3e84-4b6f-81d1-b83f1473664c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\cart.svg))">
       <SourceType>Package</SourceType>
       <SourceId>Backend</SourceId>
@@ -16079,6 +16207,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\down-chevron.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\eface200-2c30-4ab5-9bdc-a8ba5e0e5f77_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/eface200-2c30-4ab5-9bdc-a8ba5e0e5f77_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\eface200-2c30-4ab5-9bdc-a8ba5e0e5f77_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\f377ce1b-be79-44eb-a57b-1fbdbf8d2fe4_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>assets/img/f377ce1b-be79-44eb-a57b-1fbdbf8d2fe4_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\f377ce1b-be79-44eb-a57b-1fbdbf8d2fe4_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\firstbookback.webp))">
       <SourceType>Package</SourceType>

@@ -140,11 +140,10 @@ namespace Backend.Areas.Admin.Controllers
 
             ViewBag.categories = await GetCategoriesAsync();
             ViewBag.Genre = await GetGenreAsync();
-            var genres = await GetGenresAsync();
 
-            List<ProductGenre> genre = await _context.ProductGenres
-                .Where(m => m.ProductId == id)
-                .ToListAsync();
+            //List<ProductGenre> genre = await _context.ProductGenres
+            //    .Where(m => m.ProductId == id)
+            //    .ToListAsync();
 
             ProductUpdateVM updatedProduct = new ProductUpdateVM()
             {
@@ -154,8 +153,7 @@ namespace Backend.Areas.Admin.Controllers
                 Description = dbProduct.Description,
                 Price = dbProduct.Price,
                 Author = dbProduct.Author.Name,
-                GenreName = genre,
-                Genres = genres
+                GenreName = dbProduct.ProductGenres,
             };
 
             return View(updatedProduct);
@@ -168,13 +166,6 @@ namespace Backend.Areas.Admin.Controllers
             ViewBag.categories = await GetCategoriesAsync();
             ViewBag.Genre = await GetGenreAsync();
 
-            var genres = await GetGenresAsync();
-
-            ProductUpdateVM product = new ProductUpdateVM()
-            {
-                Genres = genres
-            };
-
             if (!ModelState.IsValid) return View(updatedProduct);
 
             Product dbProduct = await GetByIdAsync(id);
@@ -186,16 +177,16 @@ namespace Backend.Areas.Admin.Controllers
                     if (!photo.CheckFileType("image/"))
                     {
                         ModelState.AddModelError("Photo", "Please, choose correct image type");
+                        ViewBag.categories = await GetCategoriesAsync();
+                        ViewBag.Genre = await GetGenreAsync();
                         return View(updatedProduct);
                     }
 
                     if (!photo.CheckFileSize(1000))
                     {
                         ModelState.AddModelError("Photo", "Please, choose correct image size");
-
                         ViewBag.categories = await GetCategoriesAsync();
-                        var data2 = await GetGenresAsync();
-
+                        ViewBag.Genre = await GetGenreAsync();
                         return View(updatedProduct);
                     }
                 }
@@ -217,7 +208,7 @@ namespace Backend.Areas.Admin.Controllers
                 }
 
                 ViewBag.categories = await GetCategoriesAsync();
-                var data1 = await GetGenresAsync();
+                ViewBag.Genre = await GetGenreAsync();
             }
 
             AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
@@ -229,15 +220,15 @@ namespace Backend.Areas.Admin.Controllers
             dbProduct.UpdatedAt = DateTime.UtcNow;
             dbProduct.UpdatedBy = user.UserName;
 
-            List<ProductGenre> genre = await _context.ProductGenres
-                   .Where(m => m.ProductId == id)
-                   .ToListAsync();
-
             if (updatedProduct.GenreIds == null)
             {
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            List<ProductGenre> genre = await _context.ProductGenres
+                .Where(m => m.ProductId == id)
+                .ToListAsync();
 
             foreach (var item in genre)
             {
@@ -390,13 +381,6 @@ namespace Backend.Areas.Admin.Controllers
             IEnumerable<Genre> genres = await _context.Genres.Where(m => !m.IsDeleted).ToListAsync();
 
             return new SelectList(genres, "Id", "Name");
-        }
-
-        private async Task<List<Genre>> GetGenresAsync()
-        {
-            List<Genre> ingridients = await _context.Genres.Where(m => !m.IsDeleted).ToListAsync();
-
-            return ingridients;
         }
 
         private async Task<Product> GetByIdAsync(int id)

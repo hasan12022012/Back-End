@@ -1,0 +1,63 @@
+﻿@model BlogUpdateVM
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid mx-5 my-3">
+    <h3>Product - Update</h3>
+    <div style="display: flex; gap: 30px;">
+        <div>
+            <img style="display: block" width="200px" height="200px" src="~/assets/img/@Model.Image" />
+        </div>
+    </div>
+
+    <form asp-action="Update" method="post" enctype="multipart/form-data">
+        <div>
+            <label class="my-3" asp-for="Photo">Image</label>
+            <input class="form-control" asp-for="Photo">
+            <span class="text-danger my-1" asp-validation-for="Photo"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Name">Name</label>
+            <input class="form-control" asp-for="Name">
+            <span class="text-danger my-1" asp-validation-for="Name"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Description">Description</label>
+            <input class="form-control" asp-for="Description">
+            <span class="text-danger my-1" asp-validation-for="Description"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="CategoryId">Category</label>
+            <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.Categories"></select>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="TagIds">
+                Tag:
+                @for (int i = 0; i < Model.Tags.Count; i++)
+                {
+                    <span>@Model.Tags[i].Tag.Name</span>
+
+                    if (i < Model.Tags.Count - 1)
+                    {
+                        <span>,</span>
+                    }
+                }
+            </label>
+            <select class="form-control" asp-for="TagIds" asp-items="@ViewBag.Tags"></select>
+        </div>
+
+        <a class="btn btn-danger my-3" style="color: white;" asp-action="Index">Back</a>
+        <button type="submit" class="btn btn-primary my-3" style="color: white;">Update</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/admin/js/custom.js"></script>
+

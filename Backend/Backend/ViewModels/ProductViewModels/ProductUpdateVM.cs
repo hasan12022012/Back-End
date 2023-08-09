@@ -1,5 +1,4 @@
 ﻿using Backend.Models;
-using System.ComponentModel.DataAnnotations;
 
 namespace Backend.ViewModels.ProductViewModels
 {
@@ -16,7 +15,5 @@ namespace Backend.ViewModels.ProductViewModels
         public List<int>? GenreIds { get; set; }
         public ICollection<ProductImage>? Images { get; set; }
         public List<IFormFile>? Photos { get; set; }
-        public DateTime UpdatedAt { get; set; }
-        public string? UpdatedBy { get; set; }
     }
 }

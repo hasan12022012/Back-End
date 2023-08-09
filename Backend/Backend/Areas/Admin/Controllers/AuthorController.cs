@@ -2,8 +2,6 @@
 using Backend.Helpers;
 using Backend.Models;
 using Backend.ViewModels.AuthorViewModels;
-using Backend.ViewModels.GenreViewModels;
-using Humanizer.Localisation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;

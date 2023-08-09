@@ -9,7 +9,7 @@
         public int AuthorId { get; set; }
         public Author? Author { get; set; }
         public ICollection<ProductImage>? ProductImages { get; set; }
-        public ICollection<ProductGenre>? ProductGenres { get; set; }
+        public List<ProductGenre>? ProductGenres { get; set; }
         public ICollection<Comment>? Comments { get; set; }
     }
 }
