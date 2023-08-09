@@ -1,6 +1,6 @@
 ﻿using Backend.Models;
 
-namespace Backend.ViewModels
+namespace Backend.ViewModels.ProductViewModels
 {
     public class ProductVM
     {

@@ -1,4 +1,4 @@
-﻿namespace Backend.BasketViewModels
+﻿namespace Backend.ViewModels.BasketViewModels
 {
     public class BasketDetailVM
     {

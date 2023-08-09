@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Aw+HD3EL+wY3A2OI0sFkiE/kH5XhhLmRVgmBO1qxvzI=",
+  "Hash": "H+9G3LDmTWPwtzNGKyTNvW1clCNE9zDGeOHI0AQtjqQ=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -16726,23 +16726,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
-    },
-    {
-      "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\1a8c4a27-0e02-440b-8858-7fcfe979658f_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
-      "SourceId": "Backend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\",
-      "BasePath": "_content/Backend",
-      "RelativePath": "assets/img/1a8c4a27-0e02-440b-8858-7fcfe979658f_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\1a8c4a27-0e02-440b-8858-7fcfe979658f_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
     },
     {
       "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",

@@ -7,6 +7,6 @@ namespace Backend.Models
         public string? Name { get; set; }
         [NotMapped]
         public bool IsSelected { get; set; }
-        public ICollection<ProductGenre>? ProductGenres { get; set; }
+        public List<ProductGenre>? ProductGenres { get; set; }
     }
 }

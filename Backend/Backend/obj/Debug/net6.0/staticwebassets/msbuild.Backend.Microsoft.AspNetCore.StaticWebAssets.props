@@ -15728,22 +15728,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\css\style.css))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\1a8c4a27-0e02-440b-8858-7fcfe979658f_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>Backend</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Backend</BasePath>
-      <RelativePath>assets/img/1a8c4a27-0e02-440b-8858-7fcfe979658f_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\1a8c4a27-0e02-440b-8858-7fcfe979658f_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp))">
       <SourceType>Package</SourceType>
       <SourceId>Backend</SourceId>

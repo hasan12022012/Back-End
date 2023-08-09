@@ -1,12 +1,10 @@
-﻿using Backend.BasketViewModels;
-using Backend.DataAccessLayer;
+﻿using Backend.DataAccessLayer;
 using Backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Backend.ViewModels;
-using Online_Shop___BackEnd.ViewModels.BasketViewModels;
+using Backend.ViewModels.BasketViewModels;
 
 namespace Backend.Controllers
 {

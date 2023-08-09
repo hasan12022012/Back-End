@@ -1,12 +1,11 @@
 ﻿using Backend.DataAccessLayer;
 using Backend.Helpers;
 using Backend.Models;
-using Backend.ViewModels;
+using Backend.ViewModels.ProductViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic.FileIO;
 
 namespace Backend.Areas.Admin.Controllers
 {
@@ -14,23 +13,27 @@ namespace Backend.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
         private readonly IWebHostEnvironment _environment;
 
-        public ProductController(AppDbContext context, IWebHostEnvironment environment)
+        public ProductController(AppDbContext context,
+            IWebHostEnvironment environment,
+            UserManager<AppUser> userManager)
         {
             _context = context;
             _environment = environment;
+            _userManager = userManager;
         }
 
         public async Task<IActionResult> Index(int page = 1, int take = 3)
         {
             List<Product> products = await _context.Products
-     .Where(m => !m.IsDeleted)
-     .Include(m => m.ProductImages)
-     .OrderByDescending(m => m.Id)
-     .Skip((page * take) - take)
-     .Take(take)
-     .ToListAsync();
+                  .Where(m => !m.IsDeleted)
+                  .Include(m => m.ProductImages)
+                  .OrderByDescending(m => m.Id)
+                  .Skip((page * take) - take)
+                  .Take(take)
+                  .ToListAsync();
 
             List<ProductListVM> mapDatas = GetMapDatas(products);
             int count = await GetPageCount(take);
@@ -40,46 +43,13 @@ namespace Backend.Areas.Admin.Controllers
             return View(result);
         }
 
-        private async Task<int> GetPageCount(int take)
-        {
-            int productCount = await _context.Products.Where(m => !m.IsDeleted).CountAsync();
-
-            return (int)Math.Ceiling((decimal)productCount / take);
-        }
-
-        private List<ProductListVM> GetMapDatas(List<Product> products)
-        {
-            List<ProductListVM> productList = new List<ProductListVM>();
-
-            foreach (var product in products)
-            {
-                ProductListVM newProduct = new ProductListVM
-                {
-                    Id = product.Id,
-                    Name = product.Name,
-                    Description = product.Description,
-                    Price = product.Price,
-                    MainImage = product.ProductImages.Where(m => m.IsMain).FirstOrDefault()?.Name
-                };
-
-                productList.Add(newProduct);
-            }
-
-            return productList;
-        }
-
         [HttpGet]
         public async Task<IActionResult> Create()
         {
             ViewBag.Categories = await GetCategoriesAsync();
-            var genres = await GetGenresAsync();
+            ViewBag.Genres = await GetGenreAsync();
 
-            ProductCreateVM product = new ProductCreateVM()
-            {
-                Genres = genres
-            };
-
-            return View(product);
+            return View();
         }
 
         [HttpPost]
@@ -87,6 +57,7 @@ namespace Backend.Areas.Admin.Controllers
         public async Task<IActionResult> Create(ProductCreateVM product)
         {
             ViewBag.Categories = await GetCategoriesAsync();
+            ViewBag.Genres = await GetGenreAsync();
 
             foreach (var photo in product.Photos)
             {
@@ -100,7 +71,7 @@ namespace Backend.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError("Photo", "Please, choose correct image size");
                     ViewBag.categories = await GetCategoriesAsync();
-                    var data = await GetGenresAsync();
+                    ViewBag.Genres = await GetGenreAsync();
                     return View(product);
                 }
             }
@@ -125,25 +96,29 @@ namespace Backend.Areas.Admin.Controllers
 
             images.FirstOrDefault().IsMain = true;
 
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
             Product newProduct = new()
             {
                 ProductImages = images,
                 Name = product.Name,
                 Description = product.Description,
                 Price = product.Price,
-                AuthorId = product.AuthorId
+                AuthorId = product.AuthorId,
+                CreatedAt = DateTime.UtcNow,
+                CreatedBy = user.UserName
             };
 
             await _context.ProductImages.AddRangeAsync(images);
             await _context.Products.AddAsync(newProduct);
             await _context.SaveChangesAsync();
 
-            foreach (var ingridient in product.Genres.Where(m => m.IsSelected))
+            foreach (var genreId in product.GenreIds)
             {
                 ProductGenre genre = new()
                 {
                     ProductId = newProduct.Id,
-                    GenreId = ingridient.Id
+                    GenreId = genreId
                 };
 
                 await _context.ProductGenres.AddAsync(genre);
@@ -245,10 +220,14 @@ namespace Backend.Areas.Admin.Controllers
                 var data1 = await GetGenresAsync();
             }
 
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
             dbProduct.Name = updatedProduct.Name;
             dbProduct.Description = updatedProduct.Description;
             dbProduct.Price = updatedProduct.Price;
             dbProduct.AuthorId = updatedProduct.AuthorId;
+            dbProduct.UpdatedAt = DateTime.UtcNow;
+            dbProduct.UpdatedBy = user.UserName;
 
             List<ProductGenre> genre = await _context.ProductGenres
                    .Where(m => m.ProductId == id)
@@ -260,7 +239,7 @@ namespace Backend.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            foreach (var item in genre) 
+            foreach (var item in genre)
             {
                 _context.ProductGenres.Remove(item);
             }
@@ -269,7 +248,7 @@ namespace Backend.Areas.Admin.Controllers
             {
                 ProductGenre genr = new()
                 {
-                    GenreId = genreId,
+                    GenreId = genreId
                 };
 
                 dbProduct.ProductGenres.Add(genr);
@@ -336,6 +315,67 @@ namespace Backend.Areas.Admin.Controllers
             };
 
             return View(productDetail);
+        }
+
+        //[Authorize(Roles = "SuperAdmin")]
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            Product product = await _context.Products
+                .Where(m => !m.IsDeleted && m.Id == id)
+                .Include(m => m.ProductGenres)
+                .Include(m => m.ProductImages)
+                .Include(m => m.Author)
+                .FirstOrDefaultAsync();
+
+            if (product == null) return NotFound();
+
+            foreach (var image in product.ProductImages)
+            {
+                string path = FileType.GetFilePath(_environment.WebRootPath, "assets/img", image.Name);
+                FileType.DeleteFile(path);
+                image.IsDeleted = true;
+            }
+
+            _context.ProductImages.RemoveRange(product.ProductImages);
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            product.IsDeleted = true;
+            product.DeletedAt = DateTime.UtcNow;
+            product.DeletedBy = user.UserName;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        private async Task<int> GetPageCount(int take)
+        {
+            int productCount = await _context.Products.Where(m => !m.IsDeleted).CountAsync();
+
+            return (int)Math.Ceiling((decimal)productCount / take);
+        }
+
+        private List<ProductListVM> GetMapDatas(List<Product> products)
+        {
+            List<ProductListVM> productList = new List<ProductListVM>();
+
+            foreach (var product in products)
+            {
+                ProductListVM newProduct = new ProductListVM
+                {
+                    Id = product.Id,
+                    Name = product.Name,
+                    Description = product.Description,
+                    Price = product.Price,
+                    MainImage = product.ProductImages.Where(m => m.IsMain).FirstOrDefault()?.Name
+                };
+
+                productList.Add(newProduct);
+            }
+
+            return productList;
         }
 
         private async Task<SelectList> GetCategoriesAsync()

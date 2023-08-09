@@ -1,6 +1,6 @@
 ﻿using Backend.DataAccessLayer;
 using Backend.Models;
-using Backend.ViewModels;
+using Backend.ViewModels.ProductViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

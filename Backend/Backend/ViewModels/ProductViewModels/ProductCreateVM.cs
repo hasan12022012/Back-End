@@ -1,20 +1,21 @@
 ﻿using Backend.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace Backend.ViewModels
+namespace Backend.ViewModels.ProductViewModels
 {
-    public class ProductUpdateVM
+    public class ProductCreateVM
     {
-        public int Id { get; set; }
+        [Required]
         public string? Name { get; set; }
+        [Required]
         public string? Description { get; set; }
+        [Required]
         public double Price { get; set; }
+        [Required]
         public int AuthorId { get; set; }
-        public string? Author { get; set; }
-        public List<ProductGenre>? GenreName { get; set; }
-        public List<Genre>? Genres { get; set; }
+        [Required]
         public List<int>? GenreIds { get; set; }
-        public ICollection<ProductImage>? Images { get; set; }
+        [Required]
         public List<IFormFile>? Photos { get; set; }
     }
 }

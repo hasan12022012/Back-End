@@ -2,7 +2,7 @@
 using Backend.Helpers.Enums;
 using Backend.Models;
 using Backend.Services.Interfaces;
-using Backend.ViewModels;
+using Backend.ViewModels.AccountViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

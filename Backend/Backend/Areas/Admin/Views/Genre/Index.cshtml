@@ -1,4 +1,4 @@
-﻿@model Paginate<ProductListVM>
+﻿@model Paginate<GenreListVM>
 
 @{
     ViewData["Title"] = "Index";
@@ -19,16 +19,10 @@
                         #
                     </th>
                     <th>
-                        Image
-                    </th>
-                    <th>
                         Name
                     </th>
                     <th>
-                        Description
-                    </th>
-                    <th>
-                        Price
+                        Books
                     </th>
                     <th>
                         Setting
@@ -36,7 +30,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var product in Model.Datas)
+                @foreach (var genre in Model.Datas)
                 {
                     count++;
 
@@ -45,23 +39,20 @@
                             @count
                         </td>
                         <td>
-                            <img style="border-radius: 5px; width: 150px; height: 200px;" src="~/assets/img/@product.MainImage" alt="product">
+                            @Html.Raw(genre.Name)
                         </td>
                         <td>
-                            @Html.Raw(product.Name)
-                        </td>
-                        <td>
-                            @Html.Raw(product.Description.Substring(0, 50))
-                        </td>
-                        <td>
-                            @Html.Raw(product.Price)$
+                            @foreach (var book in genre.Books)
+                            {
+                                <p>@book.Product.Name</p>
+                            }
                         </td>
                         <td style="display: flex; gap: 10px; padding-top: 100px; justify-content: center">
-                            <a asp-action="Detail" asp-route-id="@product.Id"><button style="color: white;" type="button" class="btn btn-info">Detail</button></a>
+                            <a asp-action="Detail" asp-route-id="@genre.Id"><button style="color: white;" type="button" class="btn btn-info">Detail</button></a>
                             @*   @if (User.IsInRole("SuperAdmin"))
                         {*@
-                            <a asp-action="Update" asp-route-id="@product.Id" style="color: white;"><button type="button" class="btn btn-primary">Update</button></a>
-                            <a id="delete" product-id="@product.Id">
+                            <a asp-action="Update" asp-route-id="@genre.Id" style="color: white;"><button type="button" class="btn btn-primary">Update</button></a>
+                            <a id="deleteGenre" genre-id="@genre.Id">
                                 <button style="color: white;" type="submit" class="btn btn-danger">Delete</button>
                             </a>
                             @*}*@

@@ -37,26 +37,9 @@
             <select class="form-control" asp-for="AuthorId" asp-items="@ViewBag.Categories"></select>
         </div>
 
-        <label class="my-3" asp-for="Genres">Genre</label>
         <div>
-            @if (Model.Genres != null)
-            {
-
-                @for (int i = 0; i < Model.Genres.Count; i++)
-                {
-                    <tr>
-                        <td>
-                            <label>@Model.Genres[i].Name</label>
-                            <input type="hidden" asp-for="@Model.Genres[i].Name" />
-                            <input type="hidden" asp-for="@Model.Genres[i]" />
-                            <input type="checkbox" asp-for="@Model.Genres[i].IsSelected" style="width:15px;height:15px;margin-right:20px" />
-                            <input type="hidden" asp-for="@Model.Genres[i].Id" />
-                        </td>
-                    </tr>
-                }
-
-            }
-
+            <label class="my-3" asp-for="GenreIds">Genre</label>
+            <select class="form-control" asp-for="GenreIds" asp-items="@ViewBag.Genres"></select>
         </div>
 
         <a class="btn btn-danger my-3" style="color: white;" asp-controller="Product" asp-action="Index">Back</a>
