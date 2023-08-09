@@ -45,6 +45,8 @@ namespace Backend.Controllers
                 Banner = banner
             };
 
+            ViewBag.Ratings = await _context.Ratings.Include(r => r.Comment).ToListAsync();
+
             return View(model);
         }
     }

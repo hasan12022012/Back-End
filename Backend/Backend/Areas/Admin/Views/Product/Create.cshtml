@@ -1,0 +1,69 @@
+﻿@model ProductCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid mx-5 my-3">
+    <h3>Product - Create</h3>
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div>
+            <label class="my-3" asp-for="Photos">Images</label>
+            <input class="form-control" asp-for="Photos">
+            <span class="text-danger my-1" asp-validation-for="Photos"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Name">Name</label>
+            <input class="form-control" asp-for="Name">
+            <span class="text-danger my-1" asp-validation-for="Name"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Description">Description</label>
+            <input class="form-control" asp-for="Description">
+            <span class="text-danger my-1" asp-validation-for="Description"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Price">Price</label>
+            <input class="form-control" type="number" min="0" asp-for="Price">
+            <span class="text-danger my-1" asp-validation-for="Price"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="AuthorId">Author</label>
+            <select class="form-control" asp-for="AuthorId" asp-items="@ViewBag.Categories"></select>
+        </div>
+
+        <label class="my-3" asp-for="Genres">Genre</label>
+        <div>
+            @if (Model.Genres != null)
+            {
+
+                @for (int i = 0; i < Model.Genres.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <label>@Model.Genres[i].Name</label>
+                            <input type="hidden" asp-for="@Model.Genres[i].Name" />
+                            <input type="hidden" asp-for="@Model.Genres[i]" />
+                            <input type="checkbox" asp-for="@Model.Genres[i].IsSelected" style="width:15px;height:15px;margin-right:20px" />
+                            <input type="hidden" asp-for="@Model.Genres[i].Id" />
+                        </td>
+                    </tr>
+                }
+
+            }
+
+        </div>
+
+        <a class="btn btn-danger my-3" style="color: white;" asp-controller="Product" asp-action="Index">Back</a>
+        <button type="submit" class="btn btn-primary my-3" style="color: white;">Create</button>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationPartial" />
+}

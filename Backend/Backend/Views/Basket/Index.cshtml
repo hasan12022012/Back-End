@@ -47,7 +47,7 @@
                         <input type="button" class="incbtn" product-id="@item.Id" onclick="incrementValue()" value="+" />
                     </div>
                     <h4>$@item.Total</h4>
-                    <i data-id="@item.Id" data-quantity="@item.Quantity" class="fa-solid fa-trash" style="color: red; font-size: 25px; margin-left: 20px; cursor: pointer;"></i>
+                    <i data-id="@item.Id" data-quantity="@item.Quantity" class="fa-solid fa-trash" id="delete" style="color: red; font-size: 25px; margin-left: 20px; cursor: pointer;"></i>
                 </div>
             </div>
             endTotal += item.Total;
@@ -69,4 +69,6 @@
 @section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.30/sweetalert2.all.min.js"></script>
     <script src="~/assets/js/cart.js"></script>
+    <script src="~/assets/js/bookdetails.js"></script>
+
 }

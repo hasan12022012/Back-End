@@ -126,6 +126,81 @@ $(document).ready(function () {
             },
         });
     });
+
+    $('.5').on('click', function (e) {
+        let rating = $(this).attr('rating');
+
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/filterrating",
+            data: { rating: rating },
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.4').on('click', function (e) {
+        let rating = $(this).attr('rating');
+
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/filterrating",
+            data: { rating: rating },
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.3').on('click', function (e) {
+        let rating = $(this).attr('rating');
+
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/filterrating",
+            data: { rating: rating },
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.2').on('click', function (e) {
+        let rating = $(this).attr('rating');
+
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/filterrating",
+            data: { rating: rating },
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
+
+    $('.1').on('click', function (e) {
+        let rating = $(this).attr('rating');
+
+        $(".carousel li").slice(0).remove();
+
+        $.ajax({
+            type: "get",
+            url: "product/filterrating",
+            data: { rating: rating },
+            success: function (res) {
+                $('.carousel').append(res);
+            },
+        });
+    });
 })
 
 

@@ -105,6 +105,8 @@ namespace Backend.Controllers
                     .ToListAsync();
             }
 
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
+
             return PartialView("_ProductsPartial", searchProduct);
         }
 
@@ -133,6 +135,8 @@ namespace Backend.Controllers
                     .ToListAsync();
             }
 
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
+
             return PartialView("_ProductsPartial", model);
         }
 
@@ -158,6 +162,8 @@ namespace Backend.Controllers
                     .Include(m => m.Author)
                     .ToListAsync();
             }
+
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
 
             return PartialView("_ProductsPartial", model);
         }
@@ -185,6 +191,8 @@ namespace Backend.Controllers
                     .ToListAsync();
             }
 
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
+
             return PartialView("_ProductsPartial", filterProduct);
         }
 
@@ -200,6 +208,8 @@ namespace Backend.Controllers
 
             ProductVM model = new();
             model.Products = products;
+
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
 
             return PartialView("_ProductsPartial", model);
         }
@@ -217,6 +227,8 @@ namespace Backend.Controllers
             ProductVM model = new();
             model.Products = products;
 
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
+
             return PartialView("_ProductsPartial", model);
         }
 
@@ -232,6 +244,8 @@ namespace Backend.Controllers
 
             ProductVM model = new();
             model.Products = products;
+
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
 
             return PartialView("_ProductsPartial", model);
         }
@@ -249,6 +263,8 @@ namespace Backend.Controllers
             ProductVM model = new();
             model.Products = products;
 
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
+
             return PartialView("_ProductsPartial", model);
         }
 
@@ -264,6 +280,25 @@ namespace Backend.Controllers
 
             ProductVM model = new();
             model.Products = products;
+
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
+
+            return PartialView("_ProductsPartial", model);
+        }
+
+        public async Task<IActionResult> FilterRating(double rating)
+        {
+            IEnumerable<Product> products = await _appDbContext.Products
+            .Where(m => !m.IsDeleted && m.Rating == rating)
+            .Include(m => m.ProductGenres)
+            .Include(m => m.ProductImages)
+            .Include(m => m.Author)
+            .ToListAsync();
+
+            ProductVM model = new();
+            model.Products = products;
+
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
 
             return PartialView("_ProductsPartial", model);
         }

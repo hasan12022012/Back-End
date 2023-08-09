@@ -50,6 +50,41 @@ $(document).ready(function () {
             }
         });
     });
+
+    $(document).on('click', '#delete', function () {
+        var id = $(this).data('id')
+        var basketCount = $('#basketCount')
+        var basketCurrentCount = $('#basketCount').html()
+        var quantity = $(this).data('quantity')
+        var sum = basketCurrentCount - quantity
+
+        $.ajax({
+            method: 'Post',
+            url: "/basket/delete",
+            data: {
+                id: id
+            },
+            success: function () {
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#80808080",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!",
+                }).then(function (result) {
+                    if (result.isConfirmed) {
+                        $(`.about-of-product[id=${id}]`).remove();
+                        basketCount.html("");
+                        basketCount.append(sum);
+                    } else {
+                        return false;
+                    }
+                });
+            }
+        })
+    })
 })
 
 

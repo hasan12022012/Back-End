@@ -1,0 +1,72 @@
+﻿@model ProductUpdateVM
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid mx-5 my-3">
+    <h3>Product - Update</h3>
+    <div style="display: flex; gap: 30px;">
+        @foreach (var image in Model.Images)
+        {
+            <div>
+                <img style="display: block" width="200px" height="200px" src="~/assets/img/@image.Name" />
+                <button product-id="@image.Id" style="color: white; width: 200px;" type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        }
+    </div>
+
+    <form asp-action="Update" method="post" enctype="multipart/form-data">
+        <div>
+            <label class="my-3" asp-for="Photos">Images</label>
+            <input class="form-control" asp-for="Photos">
+            <span class="text-danger my-1" asp-validation-for="Photos"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Name">Name</label>
+            <input class="form-control" asp-for="Name">
+            <span class="text-danger my-1" asp-validation-for="Name"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Description">Description</label>
+            <input class="form-control" asp-for="Description">
+            <span class="text-danger my-1" asp-validation-for="Description"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Price">Price</label>
+            <input class="form-control" asp-for="Price">
+            <span class="text-danger my-1" asp-validation-for="Price"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="AuthorId">Category</label>
+            <select class="form-control" asp-for="AuthorId" asp-items="@ViewBag.categories"></select>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="GenreIds">Genre:
+                @for (int i = 0; i < Model.GenreName.Count; i++)
+                {
+                    <span>@Model.GenreName[i].Genre.Name</span>
+
+                    if (i < Model.GenreName.Count - 1)
+                    {
+                        <span>,</span>
+                    }
+                }
+            </label>
+            <select class="form-control" asp-for="GenreIds" asp-items="@ViewBag.Genre"></select>
+        </div>
+
+        <a class="btn btn-danger my-3" style="color: white;" asp-controller="Product" asp-action="Index">Back</a>
+        <button type="submit" class="btn btn-primary my-3" style="color: white;">Update</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/admin/js/custom.js"></script>
+

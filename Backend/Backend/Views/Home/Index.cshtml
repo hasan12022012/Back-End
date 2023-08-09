@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Home Page";
+    List<Rating> ratings = ViewBag.Ratings;
 }
 
 @section Links{
@@ -56,13 +57,24 @@
                             <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">@product.Name</a>
                             <p>@product.Author.Name</p>
                             <div class="card_text">
+                                @{
+                                    int totalRatings = ratings.Count(r => r.Comment.ProductId == product.Id && r.Comment.Product.Rating.HasValue);
+                                    double averageRating = totalRatings > 0 ? (double)ratings.Where(r => r.Comment.ProductId == product.Id && r.Comment.Product.Rating.HasValue).Sum(r => r.Comment.Product.Rating.Value) / totalRatings : 0;
+                                    int roundedRating = (int)Math.Round(averageRating, MidpointRounding.AwayFromZero);
+                                    bool hasRating = totalRatings > 0;
+                                }
                                 <div class="starsreview">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                    <p>(<span>120</span>Review)</p>
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        @if (hasRating && i <= roundedRating)
+                                        {
+                                            <i class="fa-solid fa-star" style="color:#FEC006"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="fa-solid fa-star" style="color:darkgrey"></i>
+                                        }
+                                    }
                                 </div>
                                 <div class="price">
                                     <span>$@product.Price</span>
@@ -100,14 +112,25 @@
                                 <p>By @product.Author.Name</p>
                                 <span>$@product.Price</span>
                                 <div class="ratedegree">
+                                    @{
+                                        int totalRatings = ratings.Count(r => r.Comment.ProductId == product.Id && r.Comment.Product.Rating.HasValue);
+                                        double averageRating = totalRatings > 0 ? (double)ratings.Where(r => r.Comment.ProductId == product.Id && r.Comment.Product.Rating.HasValue).Sum(r => r.Comment.Product.Rating.Value) / totalRatings : 0;
+                                        int roundedRating = (int)Math.Round(averageRating, MidpointRounding.AwayFromZero);
+                                        bool hasRating = totalRatings > 0;
+                                    }
                                     <div>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            @if (hasRating && i <= roundedRating)
+                                            {
+                                                <i class="fa-solid fa-star" style="color:#FEC006"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fa-solid fa-star" style="color:darkgrey"></i>
+                                            }
+                                        }
                                     </div>
-                                    <p>(120Review)</p>
                                 </div>
                                 <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">
                                     <button class="viewdetailsbtn">
@@ -156,13 +179,24 @@
                                 </a>
                                 <p>@product.Author.Name</p>
                                 <div class="card_text">
+                                    @{
+                                        int totalRatings = ratings.Count(r => r.Comment.ProductId == product.Id && r.Comment.Product.Rating.HasValue);
+                                        double averageRating = totalRatings > 0 ? (double)ratings.Where(r => r.Comment.ProductId == product.Id && r.Comment.Product.Rating.HasValue).Sum(r => r.Comment.Product.Rating.Value) / totalRatings : 0;
+                                        int roundedRating = (int)Math.Round(averageRating, MidpointRounding.AwayFromZero);
+                                        bool hasRating = totalRatings > 0;
+                                    }
                                     <div class="starsreview">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star-half-stroke"></i>
-                                        <p>(<span>120</span>Review)</p>
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            @if (hasRating && i <= roundedRating)
+                                            {
+                                                <i class="fa-solid fa-star" style="color:#FEC006"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fa-solid fa-star" style="color:darkgrey"></i>
+                                            }
+                                        }
                                     </div>
                                     <div class="price">
                                         <span>$@product.Price</span>
