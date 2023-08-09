@@ -20,6 +20,27 @@
         })
     })
 
+    $(document).on("click", ".dlt", function (e) {
+        e.preventDefault();
+        let productId = $(this).attr("book-id");
+        let deletedElement = $(this).parent();
+
+        $.ajax({
+            url: "/Admin/Author/DeleteProduct",
+            type: "Post",
+            data: {
+                productId: productId
+            },
+            success: function (res) {
+                if (res) {
+                    $(deletedElement).remove();
+                } else {
+                    alert("Author books must be min 1")
+                }
+            }
+        })
+    })
+
     $(document).on("click", "#delete", function (e) {
         e.preventDefault();
         let productId = $(this).attr("product-id");
@@ -44,6 +65,23 @@
 
         $.ajax({
             url: "/Admin/Genre/Delete",
+            type: "Post",
+            data: {
+                id: genreId
+            },
+            success: function () {
+                $(deletedElement).remove();
+            }
+        })
+    })
+
+    $(document).on("click", "#deleteAuthor", function (e) {
+        e.preventDefault();
+        let genreId = $(this).attr("author-id");
+        let deletedElement = $(this).parent().parent();
+
+        $.ajax({
+            url: "/Admin/Author/Delete",
             type: "Post",
             data: {
                 id: genreId

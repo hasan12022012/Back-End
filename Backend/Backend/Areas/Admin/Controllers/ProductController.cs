@@ -270,9 +270,9 @@ namespace Backend.Areas.Admin.Controllers
 
             if (productImage == null) return NotFound();
 
-            var data = await _context.Products.Include(m => m.ProductImages).FirstOrDefaultAsync(m => m.Id == productImage.ProductId);
+            Product product = await _context.Products.Include(m => m.ProductImages).FirstOrDefaultAsync(m => m.Id == productImage.ProductId);
 
-            if (data.ProductImages.Count > 1)
+            if (product.ProductImages.Count > 1)
             {
                 string path = FileType.GetFilePath(_environment.WebRootPath, "assets/img", productImage.Name);
 
@@ -285,7 +285,7 @@ namespace Backend.Areas.Admin.Controllers
                 result = true;
             }
 
-            data.ProductImages.FirstOrDefault().IsMain = true;
+            product.ProductImages.FirstOrDefault().IsMain = true;
 
             await _context.SaveChangesAsync();
 

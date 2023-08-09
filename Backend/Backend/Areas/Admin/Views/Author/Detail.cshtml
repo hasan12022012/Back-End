@@ -1,0 +1,37 @@
+﻿@model AuthorDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <table class="table table-bordered" style="table-layout: fixed; box-sizing: border-box; overflow: hidden;">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Books
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.Raw(Model.Name)
+                    </td>
+                    <td>
+                        @foreach (var product in Model.Products)
+                        {
+                            <p>@product.Name</p>
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <a class="btn btn-danger my-3" style="color: white;" asp-action="Index">Back</a>
+</div>

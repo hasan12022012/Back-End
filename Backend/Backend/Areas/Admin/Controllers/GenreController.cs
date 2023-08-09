@@ -14,14 +14,11 @@ namespace Backend.Areas.Admin.Controllers
     {
         private readonly AppDbContext _context;
         private readonly UserManager<AppUser> _userManager;
-        private readonly IWebHostEnvironment _environment;
 
         public GenreController(AppDbContext context,
-            IWebHostEnvironment environment,
             UserManager<AppUser> userManager)
         {
             _context = context;
-            _environment = environment;
             _userManager = userManager;
         }
 
@@ -56,9 +53,14 @@ namespace Backend.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(GenreCreateVM genre)
         {
-            ViewBag.Products = await GetProductsAsync();
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
             AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            ViewBag.Products = await GetProductsAsync();
 
             Genre newGenre = new()
             {
@@ -109,13 +111,18 @@ namespace Backend.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(int id, GenreUpdateVM updatedGenre)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
             ViewBag.Products = await GetProductsAsync();
 
             if (!ModelState.IsValid) return View(updatedGenre);
 
             Genre dbGenre = await GetByIdAsync(id);
-
-            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
 
             dbGenre.Name = updatedGenre.Name;
             dbGenre.UpdatedAt = DateTime.UtcNow;
@@ -174,14 +181,19 @@ namespace Backend.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
             Genre genre = await _context.Genres
                 .Where(m => !m.IsDeleted && m.Id == id)
                 .Include(m => m.ProductGenres)
                 .FirstOrDefaultAsync();
 
             if (genre == null) return NotFound();
-
-            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
 
             genre.IsDeleted = true;
             genre.DeletedAt = DateTime.UtcNow;
