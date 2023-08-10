@@ -1,1 +1,27 @@
-﻿
+﻿@model BlogVM
+
+@foreach (var comment in Model.BlogComments)
+{
+    <div class="comment-list">
+        <div class="desc">
+            <p class="comment">
+                @comment.Message
+            </p>
+            <div class="name-date-reply">
+                <div class="name-date">
+                    <a href="">
+                        <h5>@comment.AppUser.Name</h5>
+                    </a>
+                    <p class="date">@comment.CreateDate.ToString("MMMM dd, yyyy at HH:mm:ss")</p>
+                </div>
+                @if (ViewBag.UserId == comment.AppUserId)
+                {
+                    <div class="mt-2 text-right" style="width: 100%; display: flex; justify-content: end;">
+                        <button comment-id="@comment.Id" class="btn btn-danger dlt btn-sm shadow-none">Remove</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+}

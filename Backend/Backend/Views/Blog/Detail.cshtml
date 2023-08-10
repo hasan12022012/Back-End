@@ -49,90 +49,37 @@
                     </div>
                 </div>
                 <div class="comments-area">
-                    <h4>05 Comments</h4>
-                    <div class="comment-list">
-                        <div class="thumb">
-                            <img src="~/assets/img/comment_1.png.webp" alt="">
-                        </div>
-                        <div class="desc">
-                            <p class="comment">
-                                Multiply sea night grass fourth day sea lesser rule open subdue female fill which
-                                them
-                                Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                            </p>
-                            <div class="name-date-reply">
-                                <div class="name-date">
-                                    <a href="">
-                                        <h5>Emilly Blunt</h5>
-                                    </a>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                </div>
-                                <div class="reply-btn">
-                                    <a href="" class="btn-reply">reply</a>
+                    @foreach (var comment in Model.BlogComments)
+                    {
+                        <div class="comment-list">
+                            <div class="desc">
+                                <p class="comment">
+                                    @comment.Message
+                                </p>
+                                <div class="name-date-reply">
+                                    <div class="name-date">
+                                        <a href="">
+                                            <h5>@comment.AppUser.Name</h5>
+                                        </a>
+                                        <p class="date">@comment.CreateDate.ToString("MMMM dd, yyyy at HH:mm:ss")</p>
+                                        @if (ViewBag.UserId == comment.AppUserId)
+                                        {
+                                            <button comment-id="@comment.Id" class="btn btn-danger dlt btn-sm shadow-none">Remove</button>
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="comment-list">
-                        <div class="thumb">
-                            <img src="~/assets/img/comment_2.png.webp" alt="">
-                        </div>
-                        <div class="desc">
-                            <p class="comment">
-                                Multiply sea night grass fourth day sea lesser rule open subdue female fill which
-                                them
-                                Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                            </p>
-                            <div class="name-date-reply">
-                                <div class="name-date">
-                                    <a href="">
-                                        <h5>Emilly Blunt</h5>
-                                    </a>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                </div>
-                                <div class="reply-btn">
-                                    <a href="" class="btn-reply">reply</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-list">
-                        <div class="thumb">
-                            <img src="~/assets/img/comment_3.png.webp" alt="">
-                        </div>
-                        <div class="desc">
-                            <p class="comment">
-                                Multiply sea night grass fourth day sea lesser rule open subdue female fill which
-                                them
-                                Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                            </p>
-                            <div class="name-date-reply">
-                                <div class="name-date">
-                                    <a href="">
-                                        <h5>Emilly Blunt</h5>
-                                    </a>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                </div>
-                                <div class="reply-btn">
-                                    <a href="" class="btn-reply">reply</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    }
                 </div>
                 <div class="comment-form">
                     <h4>Leave a Reply</h4>
-                    <form action="#">
-                        <textarea name="" id="" placeholder="Write Comment" required="required"></textarea>
-                        <div class="name-email">
-                            <input class="name" type="text" placeholder="Name">
-                            <input class="email" type="text" placeholder="Email">
-                        </div>
-                        <div class="website">
-                            <input class="website-input" type="text" placeholder="Website">
-                        </div>
+                    <form>
+                        <textarea name="commentMessage" id="" class="message" placeholder="Write Comment" required="required"></textarea>
+                        <input name="productId" type="hidden" class="product-id" value="@Model.Blog.Id" />
                         <div class="post-comment">
-                            <button>Post Comment</button>
+                            <button class="post">Post Comment</button>
                         </div>
                     </form>
                 </div>
