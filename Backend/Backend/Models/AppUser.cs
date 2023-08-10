@@ -9,5 +9,6 @@ namespace Backend.Models
         public string? OTP { get; set; }
         public Basket? Basket { get; set; }
         public ICollection<Comment>? Comments { get; set; }
+        public ICollection<BlogComment>? BlogComments { get; set; }
     }
 }

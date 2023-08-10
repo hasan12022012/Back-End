@@ -30,5 +30,6 @@ namespace Backend.DataAccessLayer
         public DbSet<Tag> Tags { get; set; }
         public DbSet<BlogTag> BlogTags { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<BlogComment> BlogComments { get; set; }
     }
 }

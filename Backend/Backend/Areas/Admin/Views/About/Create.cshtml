@@ -1,0 +1,30 @@
+﻿@model AboutCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid mx-5 my-3">
+    <h3>About - Create</h3>
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div>
+            <label class="my-3" asp-for="Title">Title</label>
+            <input class="form-control" asp-for="Title">
+            <span class="text-danger my-1" asp-validation-for="Title"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="Content">Content</label>
+            <input class="form-control" asp-for="Content">
+            <span class="text-danger my-1" asp-validation-for="Content"></span>
+        </div>
+
+        <a class="btn btn-danger my-3" style="color: white;" asp-action="Index">Back</a>
+        <button type="submit" class="btn btn-primary my-3" style="color: white;">Create</button>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationPartial" />
+}

@@ -8,5 +8,6 @@
         public int BlogCategoryId { get; set; }
         public BlogCategory? BlogCategory { get; set; }
         public List<BlogTag>? BlogTags { get; set; }
+        public ICollection<BlogComment>? BlogComments { get; set; }
     }
 }

@@ -62,7 +62,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Abouts");
+                    b.ToTable("Abouts", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.AppUser", b =>
@@ -179,7 +179,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Banner", b =>
@@ -219,7 +219,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Banners");
+                    b.ToTable("Banners", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Basket", b =>
@@ -263,7 +263,7 @@ namespace Backend.Migrations
                         .IsUnique()
                         .HasFilter("[AppUserId] IS NOT NULL");
 
-                    b.ToTable("Baskets");
+                    b.ToTable("Baskets", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.BasketProduct", b =>
@@ -313,7 +313,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("BasketProducts");
+                    b.ToTable("BasketProducts", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Blog", b =>
@@ -364,7 +364,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("BlogCategoryId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.BlogCategory", b =>
@@ -404,7 +404,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BlogCategories");
+                    b.ToTable("BlogCategories", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.BlogTag", b =>
@@ -451,7 +451,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("BlogTags");
+                    b.ToTable("BlogTags", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Comment", b =>
@@ -483,7 +483,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Contact", b =>
@@ -532,7 +532,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contacts");
+                    b.ToTable("Contacts", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Genre", b =>
@@ -572,7 +572,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genres");
+                    b.ToTable("Genres", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Product", b =>
@@ -626,7 +626,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.ProductGenre", b =>
@@ -673,7 +673,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductGenres");
+                    b.ToTable("ProductGenres", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.ProductImage", b =>
@@ -721,7 +721,7 @@ namespace Backend.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages");
+                    b.ToTable("ProductImages", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Rating", b =>
@@ -743,7 +743,7 @@ namespace Backend.Migrations
                     b.HasIndex("CommentId")
                         .IsUnique();
 
-                    b.ToTable("Ratings");
+                    b.ToTable("Ratings", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Setting", b =>
@@ -762,7 +762,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Slider", b =>
@@ -808,7 +808,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("Backend.Models.Tag", b =>
@@ -848,7 +848,7 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tags");
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
