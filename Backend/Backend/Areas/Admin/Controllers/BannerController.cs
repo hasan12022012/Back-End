@@ -2,6 +2,7 @@
 using Backend.Helpers;
 using Backend.Models;
 using Backend.ViewModels.BannerViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Backend.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class BannerController : Controller
     {
         private readonly AppDbContext _context;
@@ -38,6 +40,7 @@ namespace Backend.Areas.Admin.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpGet]
         public async Task<IActionResult> Update(int? id)
         {

@@ -24,10 +24,7 @@
                         <img style="border-radius: 5px; width: 150px; height: 200px;" src="~/assets/img/@Model.Image" alt="product">
                     </td>
                     <td style="display: flex; gap: 10px; padding-top: 100px; justify-content: center">
-                        @*   @if (User.IsInRole("SuperAdmin"))
-                        {*@
                         <a asp-action="Update" asp-route-id="@Model.Id" style="color: white;"><button type="button" class="btn btn-primary">Update</button></a>
-                        @*}*@
                     </td>
                 </tr>
             </tbody>

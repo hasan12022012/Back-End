@@ -3,6 +3,7 @@ using Backend.Helpers.Enums;
 using Backend.Models;
 using Backend.Services.Interfaces;
 using Backend.ViewModels.AccountViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -68,7 +69,7 @@ namespace Backend.Controllers
                 return View(registerVM);
             }
 
-            await _userManager.AddToRoleAsync(user, Roles.Member.ToString());
+            await _userManager.AddToRoleAsync(user, Roles.Admin.ToString());
 
             string body = string.Empty;
             string path = "wwwroot/assets/templates/verify.html";
@@ -245,7 +246,6 @@ namespace Backend.Controllers
             return RedirectToAction(nameof(Login));
         }
 
-
         [HttpGet]
         public IActionResult Login()
         {
@@ -294,7 +294,7 @@ namespace Backend.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        //[Authorize(Roles = "SuperAdmin")]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task CreateRoles()
         {
             foreach (var role in Enum.GetValues(typeof(Roles)))

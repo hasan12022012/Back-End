@@ -18,25 +18,25 @@
 <body>
     <section class="login">
         <div class="container">
-            <div class="window">
+            <div class="window" style="height: auto;">
                 <div class="loginhead">
                     <span>Confirm Email</span>
                     <p>Enter OTP to get access</p>
                 </div>
-                <form asp-action="ConfirmEmail" method="post" enctype="multipart/form-data">
+                <form asp-action="ConfirmEmail" method="post" enctype="multipart/form-data" style="display: inline;">
                     <label for="usernameOremail">OTP</label>
                     <input asp-for="OTP" placeholder="OTP" />
-                    <span style="display: block;" class="text-danger">@TempData["Error"]</span>
+                    <span style="display: block; color: red;" class="text-danger">@TempData["Error"]</span>
                     <input type="hidden" asp-for="Email">
-                    <div class="loginfoot">
+                    <div class="loginfoot" style="margin-top: 0; display: inline;">
                         <button>Confirm</button>
                     </div>
-                    <form asp-action="ResendOTP" asp-route-email="@Model.Email">
-                        <p class="sign-up">
-                            OTP still not reached you?
-                        </p>
-                        <button class="a">Resend</button>
-                    </form>
+                </form>
+                <form asp-action="ResendOTP" asp-route-email="@Model.Email" style="position: relative;">
+                    <p class="sign-up" style="position: absolute; right: 75px;">
+                        OTP still not reached you?
+                    </p>
+                    <button style="border: none; padding: 10px; background: red; color: white; position: absolute; right: 0;">Resend</button>
                 </form>
             </div>
         </div>

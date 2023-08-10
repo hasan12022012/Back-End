@@ -2,6 +2,7 @@
 using Backend.Helpers;
 using Backend.Models;
 using Backend.ViewModels.GenreViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Backend.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class GenreController : Controller
     {
         private readonly AppDbContext _context;
@@ -41,6 +43,7 @@ namespace Backend.Areas.Admin.Controllers
             return View(result);
         }
 
+        [Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -89,6 +92,7 @@ namespace Backend.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpGet]
         public async Task<IActionResult> Update(int? id)
         {
@@ -158,7 +162,7 @@ namespace Backend.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //[Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpGet]
         public async Task<IActionResult> Detail(int? id)
         {
@@ -177,7 +181,7 @@ namespace Backend.Areas.Admin.Controllers
             return View(genreDetail);
         }
 
-        //[Authorize(Roles = "SuperAdmin")]
+        [Authorize(Roles = "SuperAdmin")]
         [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {
