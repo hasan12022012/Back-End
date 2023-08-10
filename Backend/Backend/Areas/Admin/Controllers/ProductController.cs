@@ -227,12 +227,13 @@ namespace Backend.Areas.Admin.Controllers
             }
 
             List<ProductGenre> genre = await _context.ProductGenres
-                .Where(m => m.ProductId == id)
+                .Where(m => !m.IsDeleted && m.ProductId == id)
                 .ToListAsync();
+
 
             foreach (var item in genre)
             {
-                _context.ProductGenres.Remove(item);
+                dbProduct.ProductGenres.Remove(item);
             }
 
             foreach (var genreId in updatedProduct.GenreIds)
@@ -360,7 +361,7 @@ namespace Backend.Areas.Admin.Controllers
                     Name = product.Name,
                     Description = product.Description,
                     Price = product.Price,
-                    MainImage = product.ProductImages.Where(m => m.IsMain).FirstOrDefault()?.Name
+                    MainImage = product.ProductImages.FirstOrDefault()?.Name
                 };
 
                 productList.Add(newProduct);

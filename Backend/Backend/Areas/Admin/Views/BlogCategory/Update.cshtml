@@ -1,0 +1,36 @@
+﻿@model BlogCategoryUpdateVM
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid mx-5 my-3">
+    <h3>Category - Update</h3>
+    <form asp-action="Update" method="post" enctype="multipart/form-data">
+        <div>
+            <label class="my-3" asp-for="Name">Name</label>
+            <input class="form-control" asp-for="Name">
+            <span class="text-danger my-1" asp-validation-for="Name"></span>
+        </div>
+
+        <div>
+            <label class="my-3" asp-for="BlogIds">
+                @for (int i = 0; i < Model.Blogs.Count; i++)
+                {
+                    <div style="display: inline-block; margin-left: 20px;">
+                        <p>@Model.Blogs[i].Name</p>
+                        <a class="btn btn-danger my-3 dltBlog" style="color: white; margin: 0 !important;" blog-id="@Model.Blogs[i].Id">Delete</a>
+                    </div>
+                }
+            </label>
+            <select class="form-control" asp-for="BlogIds" asp-items="@ViewBag.Blogs"></select>
+        </div>
+        <a class="btn btn-danger my-3" style="color: white;" asp-action="Index">Back</a>
+        <button type="submit" class="btn btn-primary my-3" style="color: white;">Update</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/admin/js/custom.js"></script>
+

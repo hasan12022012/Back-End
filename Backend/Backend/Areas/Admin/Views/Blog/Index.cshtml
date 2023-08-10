@@ -55,7 +55,7 @@
                             @*   @if (User.IsInRole("SuperAdmin"))
                         {*@
                             <a asp-action="Update" asp-route-id="@blog.Id" style="color: white;"><button type="button" class="btn btn-primary">Update</button></a>
-                            <a id="blogGenre" blog-id="@blog.Id">
+                            <a id="deleteBlog" blog-id="@blog.Id">
                                 <button style="color: white;" type="submit" class="btn btn-danger">Delete</button>
                             </a>
                             @*}*@

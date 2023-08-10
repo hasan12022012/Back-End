@@ -1,6 +1,7 @@
 ﻿using Backend.DataAccessLayer;
 using Backend.Helpers;
 using Backend.Models;
+using Backend.ViewModels.AuthorViewModels;
 using Backend.ViewModels.BlogViewModels;
 using Backend.ViewModels.GenreViewModels;
 using Backend.ViewModels.ProductViewModels;
@@ -157,33 +158,37 @@ namespace Backend.Areas.Admin.Controllers
 
             Blog dbBlog = await GetByIdAsync(id);
 
-            if (!updatedBlog.Photo.CheckFileType("image/"))
+            if (updatedBlog.Photo != null)
             {
-                ModelState.AddModelError("Photo", "Please, choose correct image type");
-                ViewBag.Categories = await GetCategoriesAsync();
-                ViewBag.Tags = await GetTagAsync();
-                return View(updatedBlog);
+                if (!updatedBlog.Photo.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError("Photo", "Please, choose correct image type");
+                    ViewBag.Categories = await GetCategoriesAsync();
+                    ViewBag.Tags = await GetTagAsync();
+                    return View(updatedBlog);
+                }
+
+                if (!updatedBlog.Photo.CheckFileSize(1000))
+                {
+                    ModelState.AddModelError("Photo", "Please, choose correct image size");
+                    ViewBag.Categories = await GetCategoriesAsync();
+                    ViewBag.Tags = await GetTagAsync();
+                    return View(updatedBlog);
+                }
+
+                string fileName = Guid.NewGuid().ToString() + "_" + updatedBlog.Photo.FileName;
+
+                string path = FileType.GetFilePath(_environment.WebRootPath, "assets/img", fileName);
+
+                await FileType.SaveFile(path, updatedBlog.Photo);
+
+                dbBlog.Image = fileName;
             }
-
-            if (!updatedBlog.Photo.CheckFileSize(1000))
-            {
-                ModelState.AddModelError("Photo", "Please, choose correct image size");
-                ViewBag.Categories = await GetCategoriesAsync();
-                ViewBag.Tags = await GetTagAsync();
-                return View(updatedBlog);
-            }
-
-            string fileName = Guid.NewGuid().ToString() + "_" + updatedBlog.Photo.FileName;
-
-            string path = FileType.GetFilePath(_environment.WebRootPath, "assets/img", fileName);
-
-            await FileType.SaveFile(path, updatedBlog.Photo);
 
             AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
 
             dbBlog.Name = updatedBlog.Name;
             dbBlog.Description = updatedBlog.Description;
-            dbBlog.Image = fileName;
             dbBlog.BlogCategoryId = updatedBlog.CategoryId;
             dbBlog.UpdatedAt = DateTime.UtcNow;
             dbBlog.UpdatedBy = user.UserName;
@@ -195,12 +200,12 @@ namespace Backend.Areas.Admin.Controllers
             }
 
             List<BlogTag> blogTags = await _context.BlogTags
-                 .Where(m => !m.IsDeleted)
+                 .Where(m => !m.IsDeleted && m.BlogId == id)
                  .ToListAsync();
 
-            foreach (var blogTag1 in blogTags)
+            foreach (var item in blogTags)
             {
-                _context.BlogTags.Remove(blogTag1);
+                dbBlog.BlogTags.Remove(item);
             }
 
             foreach (var tagId in updatedBlog.TagIds)
@@ -216,6 +221,55 @@ namespace Backend.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
+        }
+
+        //[Authorize(Roles = "SuperAdmin, Admin")]
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null) return BadRequest();
+
+            Blog blog = await GetByIdAsync((int)id);
+
+            if (blog == null) return NotFound();
+
+            BlogDetailVM blogDetail = new()
+            {
+                Id = blog.Id,
+                Image = blog.Image,
+                Name = blog.Name,
+                Description = blog.Description,
+                Category = blog.BlogCategory.Name,
+                Tags = blog.BlogTags
+            };
+
+            return View(blogDetail);
+        }
+
+        //[Authorize(Roles = "SuperAdmin")]
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            Blog blog = await _context.Blogs
+                .Where(m => !m.IsDeleted && m.Id == id)
+                .Include(m => m.BlogTags)
+                .Include(m => m.BlogCategory)
+                .FirstOrDefaultAsync();
+
+            if (blog == null) return NotFound();
+
+            string path = FileType.GetFilePath(_environment.WebRootPath, "assets/img", blog.Image);
+            FileType.DeleteFile(path);
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            blog.IsDeleted = true;
+            blog.DeletedAt = DateTime.UtcNow;
+            blog.DeletedBy = user.UserName;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
         }
 
         private async Task<int> GetPageCount(int take)

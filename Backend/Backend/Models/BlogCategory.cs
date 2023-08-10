@@ -3,6 +3,6 @@
     public class BlogCategory : BaseEntity
     {
         public string? Name { get; set; }
-        public ICollection<Blog>? Blogs { get; set; }
+        public List<Blog>? Blogs { get; set; }
     }
 }

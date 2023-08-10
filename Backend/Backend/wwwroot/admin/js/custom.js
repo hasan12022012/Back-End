@@ -41,6 +41,27 @@
         })
     })
 
+    $(document).on("click", ".dltBlog", function (e) {
+        e.preventDefault();
+        let blogId = $(this).attr("blog-id");
+        let deletedElement = $(this).parent();
+
+        $.ajax({
+            url: "/Admin/BlogCategory/DeleteBlog",
+            type: "Post",
+            data: {
+                blogId: blogId
+            },
+            success: function (res) {
+                if (res) {
+                    $(deletedElement).remove();
+                } else {
+                    alert("Category blogs must be min 1")
+                }
+            }
+        })
+    })
+
     $(document).on("click", "#delete", function (e) {
         e.preventDefault();
         let productId = $(this).attr("product-id");
@@ -85,6 +106,23 @@
             type: "Post",
             data: {
                 id: genreId
+            },
+            success: function () {
+                $(deletedElement).remove();
+            }
+        })
+    })
+
+    $(document).on("click", "#deleteBlog", function (e) {
+        e.preventDefault();
+        let blogId = $(this).attr("blog-id");
+        let deletedElement = $(this).parent().parent();
+
+        $.ajax({
+            url: "/Admin/Blog/Delete",
+            type: "Post",
+            data: {
+                id: blogId
             },
             success: function () {
                 $(deletedElement).remove();

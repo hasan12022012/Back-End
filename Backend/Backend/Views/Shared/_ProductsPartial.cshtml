@@ -9,7 +9,7 @@
     <li style="width:205px; margin-top:20px; padding:0;" class="card col-3" data-id="@product.ProductGenres.FirstOrDefault()?.GenreId">
         <div class="card_image">
             <a asp-action="Detail" asp-route-id="@product.Id">
-                <img width="100%" src="~/assets/img/@product.ProductImages.FirstOrDefault(m => m.IsMain).Name" alt="">
+                <img width="100%" src="~/assets/img/@product.ProductImages.FirstOrDefault().Name" alt="">
             </a>
         </div>
         <div class="card_content">

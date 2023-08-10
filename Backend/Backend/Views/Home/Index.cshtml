@@ -51,7 +51,7 @@
                 {
                     <li class="card">
                         <div class="card_image">
-                            <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id"><img src="~/assets/img/@product.ProductImages.FirstOrDefault(m => m.IsMain).Name" alt=""></a>
+                            <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id"><img src="~/assets/img/@product.ProductImages.FirstOrDefault().Name" alt=""></a>
                         </div>
                         <div class="card_content">
                             <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">@product.Name</a>
@@ -105,7 +105,7 @@
                     <div class="detailscard">
                         <div class="bookdetails">
                             <div class="bookimg">
-                                <img src="~/assets/img/@product.ProductImages.FirstOrDefault(m => m.IsMain).Name" alt="">
+                                <img src="~/assets/img/@product.ProductImages.FirstOrDefault().Name" alt="">
                             </div>
                             <div class="captions">
                                 <h3>@product.Name</h3>
@@ -170,7 +170,7 @@
                         <div class="card" data-id="@product.ProductGenres.FirstOrDefault().GenreId">
                             <div class="card_image">
                                 <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">
-                                    <img src="~/assets/img/@product.ProductImages.FirstOrDefault(m => m.IsMain).Name" alt="" />
+                                    <img src="~/assets/img/@product.ProductImages.FirstOrDefault().Name" alt="" />
                                 </a>
                             </div>
                             <div class="card_content">

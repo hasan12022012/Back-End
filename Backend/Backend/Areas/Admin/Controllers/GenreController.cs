@@ -128,19 +128,19 @@ namespace Backend.Areas.Admin.Controllers
             dbGenre.UpdatedAt = DateTime.UtcNow;
             dbGenre.UpdatedBy = user.UserName;
 
-            List<ProductGenre> product = await _context.ProductGenres
-                   .Where(m => m.GenreId == id)
-                   .ToListAsync();
-
             if (updatedGenre.ProductIds == null)
             {
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
 
+            List<ProductGenre> product = await _context.ProductGenres
+                .Where(m => !m.IsDeleted && m.GenreId == id)
+                .ToListAsync();
+
             foreach (var item in product)
             {
-                _context.ProductGenres.Remove(item);
+                dbGenre.ProductGenres.Remove(item);
             }
 
             foreach (var productId in updatedGenre.ProductIds)
