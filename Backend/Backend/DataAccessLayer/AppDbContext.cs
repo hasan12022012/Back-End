@@ -1,7 +1,6 @@
 ﻿using Backend.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace Backend.DataAccessLayer
 {
@@ -31,5 +30,6 @@ namespace Backend.DataAccessLayer
         public DbSet<BlogTag> BlogTags { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<BlogComment> BlogComments { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
     }
 }
