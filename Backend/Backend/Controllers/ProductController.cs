@@ -20,11 +20,14 @@ namespace Backend.Controllers
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.Count = await _appDbContext.Products.Where(m => !m.IsDeleted).CountAsync();
+
             IEnumerable<Product> products = await _appDbContext.Products
                 .Where(m => !m.IsDeleted)
                 .Include(m => m.ProductGenres)
                 .Include(m => m.ProductImages)
                 .Include(m => m.Author)
+                .Take(4)
                 .ToListAsync();
 
             IEnumerable<Genre> genres = await _appDbContext.Genres
@@ -364,6 +367,27 @@ namespace Backend.Controllers
             await _appDbContext.SaveChangesAsync();
 
             return PartialView("_RatingPartial", ratings);
+        }
+
+        public async Task<IActionResult> ShowMore(int skip)
+        {
+            IEnumerable<Product> products = await _appDbContext.Products
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductImages)
+                .Include(m => m.ProductGenres)
+                .Include(m => m.Author)
+                .Skip(skip)
+                .Take(4)
+                .ToListAsync();
+
+            ViewBag.Ratings = await _appDbContext.Ratings.Include(r => r.Comment).ToListAsync();
+
+            ProductVM model = new()
+            {
+                Products = products
+            };
+
+            return PartialView("_ProductsPartial", model);
         }
     }
 }

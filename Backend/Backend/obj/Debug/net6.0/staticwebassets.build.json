@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iHWXLzmawdyVCGrU5eEGlrve1XrZqJjAbNT4gmajB58=",
+  "Hash": "SIQY5v5Atk6apzcGlcnB+S33jalYZy8asC8M5xoyxws=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -18137,40 +18137,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\sliderimage1.webp"
-    },
-    {
-      "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\sliderimage2.webp",
-      "SourceId": "Backend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\",
-      "BasePath": "_content/Backend",
-      "RelativePath": "assets/img/sliderimage2.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\sliderimage2.webp"
-    },
-    {
-      "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\sliderimage3.webp",
-      "SourceId": "Backend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\",
-      "BasePath": "_content/Backend",
-      "RelativePath": "assets/img/sliderimage3.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\sliderimage3.webp"
     },
     {
       "Identity": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\js\\about.js",

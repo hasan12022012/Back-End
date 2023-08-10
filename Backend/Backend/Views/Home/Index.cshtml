@@ -163,53 +163,13 @@
             </ul>
         </div>
         <div class="carousel">
-            <div class="row" style="justify-content: flex-start; row-gap: 15px;">
-                @foreach (var product in Model.Products)
-                {
-                    <div class="col-2">
-                        <div class="card" data-id="@product.ProductGenres.FirstOrDefault().GenreId">
-                            <div class="card_image">
-                                <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">
-                                    <img src="~/assets/img/@product.ProductImages.FirstOrDefault().Name" alt="" />
-                                </a>
-                            </div>
-                            <div class="card_content">
-                                <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id">
-                                    @product.Name
-                                </a>
-                                <p>@product.Author.Name</p>
-                                <div class="card_text">
-                                    @{
-                                        int totalRatings = ratings.Count(r => r.Comment.ProductId == product.Id && r.Comment.Product.Rating.HasValue);
-                                        double averageRating = totalRatings > 0 ? (double)ratings.Where(r => r.Comment.ProductId == product.Id && r.Comment.Product.Rating.HasValue).Sum(r => r.Comment.Product.Rating.Value) / totalRatings : 0;
-                                        int roundedRating = (int)Math.Round(averageRating, MidpointRounding.AwayFromZero);
-                                        bool hasRating = totalRatings > 0;
-                                    }
-                                    <div class="starsreview">
-                                        @for (int i = 1; i <= 5; i++)
-                                        {
-                                            @if (hasRating && i <= roundedRating)
-                                            {
-                                                <i class="fa-solid fa-star" style="color:#FEC006"></i>
-                                            }
-                                            else
-                                            {
-                                                <i class="fa-solid fa-star" style="color:darkgrey"></i>
-                                            }
-                                        }
-                                    </div>
-                                    <div class="price">
-                                        <span>$@product.Price</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
+            <input type="hidden" id="product-count" name="name" value="@ViewBag.Count" />
+            <div class="row carousell" style="justify-content: flex-start; row-gap: 15px;">
+                <partial name="_HomeProductPartial" />
             </div>
         </div>
         <div class="browsebtn">
-            <a href="">
+            <a>
                 <button class="browsemorebtn">
                     <h1>Browse More</h1>
                 </button>

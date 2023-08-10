@@ -26,6 +26,31 @@ $(document).ready(function () {
             products.parent().fadeIn();
         }
     })
+
+
+    $(document).on("click", ".browsemorebtn", function () {
+
+        let parent = $(".carousell");
+
+        let skipCount = $(".carousell").children().length;
+
+        let productCount = $("#product-count").val();
+
+        $.ajax({
+            url: `home/showmore?skip=${skipCount}`,
+            type: "Get",
+            success: function (response) {
+
+                $(parent).append(response);
+
+                skipCount = $(".carousell").children().length;
+
+                if (skipCount >= productCount) {
+                    $(".browsemorebtn").addClass("d-none");
+                }
+            }
+        });
+    });
 })
 
 

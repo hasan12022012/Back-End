@@ -19,9 +19,9 @@ const popup = document.getElementById('popup');
 
 openPopupButton.addEventListener('click', (e) => {
     e.preventDefault();
-  popup.style.display = 'block';
+    popup.style.display = 'block';
 });
 
 closePopupButton.addEventListener('click', () => {
-  popup.style.display = 'none';
+    popup.style.display = 'none';
 });

@@ -36,6 +36,30 @@ $(document).ready(function () {
         });
     });
 
+    $(document).on("click", ".browsemorebtn", function () {
+
+        let parent = $(".carousel");
+
+        let skipCount = $(".carousel").children().length;
+
+        let productCount = $("#product-count").val();
+
+        $.ajax({
+            url: `product/showmore?skip=${skipCount}`,
+            type: "Get",
+            success: function (response) {
+
+                $(parent).append(response);
+
+                skipCount = $(".carousel").children().length;
+
+                if (skipCount >= productCount) {
+                    $(".browsemorebtn").addClass("d-none");
+                }
+            }
+        });
+    });
+
     $('.filter-genre').on('click', function (e) {
         let genreId = $(this).attr('genre-id');
 

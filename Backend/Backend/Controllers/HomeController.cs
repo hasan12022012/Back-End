@@ -3,7 +3,6 @@ using Backend.Models;
 using Backend.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace Backend.Controllers
 {
@@ -27,6 +26,7 @@ namespace Backend.Controllers
                 .Include(m => m.ProductImages)
                 .Include(m => m.Author)
                 .Include(m => m.ProductGenres)
+                .Take(6)
                 .ToListAsync();
 
             IEnumerable<Genre> genres = await _context.Genres
@@ -48,6 +48,27 @@ namespace Backend.Controllers
             ViewBag.Ratings = await _context.Ratings.Include(r => r.Comment).ToListAsync();
 
             return View(model);
+        }
+
+        public async Task<IActionResult> ShowMore(int skip)
+        {
+            IEnumerable<Product> products = await _context.Products
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductImages)
+                .Include(m => m.ProductGenres)
+                .Include(m => m.Author)
+                .Skip(skip)
+                .Take(6)
+                .ToListAsync();
+
+            ViewBag.Ratings = await _context.Ratings.Include(r => r.Comment).ToListAsync();
+
+            HomeVM model = new()
+            {
+                Products = products
+            };
+
+            return PartialView("_HomeProductPartial", model);
         }
     }
 }
