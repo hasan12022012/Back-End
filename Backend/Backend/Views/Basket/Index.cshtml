@@ -40,11 +40,8 @@
                 </div>
                 <div class="price-of-product">
                     <h4>$@item.Price</h4>
-                    <div class="quantity-product">
-                        <input type="button" class="dcrbtn" product-id="@item.Id" onclick="decrementValue()" value="-" />
-                        <input type="text" class="number" name="quantity" value="@item.Quantity" maxlength="2" max="10" size="1"
-                           id="number" />
-                        <input type="button" class="incbtn" product-id="@item.Id" onclick="incrementValue()" value="+" />
+                    <div class="quantity-product" style="text-align:center;">
+                        <p>@item.Quantity</p>
                     </div>
                     <h4>$@item.Total</h4>
                     <i data-id="@item.Id" data-quantity="@item.Quantity" class="fa-solid fa-trash" id="delete" style="color: red; font-size: 25px; margin-left: 20px; cursor: pointer;"></i>
@@ -57,7 +54,7 @@
             <h5>$@endTotal</h5>
         </div>
         <div class="continue">
-            <a href="" class="continue-shopping">
+            <a asp-controller="Product" asp-action="Index" class="continue-shopping">
                 <button class="continue-shopping-btn">
                     <h1>Continue Shopping</h1>
                 </button>

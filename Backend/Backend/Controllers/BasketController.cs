@@ -1,10 +1,10 @@
 ﻿using Backend.DataAccessLayer;
 using Backend.Models;
+using Backend.ViewModels.BasketViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Backend.ViewModels.BasketViewModels;
 
 namespace Backend.Controllers
 {
@@ -27,8 +27,6 @@ namespace Backend.Controllers
             var basket = await _context.Baskets
                .Include(m => m.BasketProducts)
                .ThenInclude(m => m.Product)
-               .Include(m => m.BasketProducts)
-               .ThenInclude(m => m.Product)
                .ThenInclude(m => m.ProductImages)
                .FirstOrDefaultAsync(m => m.AppUserId == user.Id);
 
@@ -43,7 +41,7 @@ namespace Backend.Controllers
                     Id = dbBasketProduct.Id,
                     ProductId = dbBasketProduct.ProductId,
                     Name = dbBasketProduct.Product.Name,
-                    Image = dbBasketProduct.Product.ProductImages.FirstOrDefault(m => m.IsMain)?.Name,
+                    Image = dbBasketProduct.Product.ProductImages.FirstOrDefault()?.Name,
                     Quantity = dbBasketProduct.Quantity,
                     Price = dbBasketProduct.Product.Price,
                     Total = (dbBasketProduct.Product.Price * dbBasketProduct.Quantity),
@@ -55,6 +53,7 @@ namespace Backend.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddBasket(BasketAddVM basketAddVM)
         {
