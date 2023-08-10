@@ -129,4 +129,72 @@
             }
         })
     })
+
+    $(document).on("click", "#deleteCategory", function (e) {
+        e.preventDefault();
+        let categoryId = $(this).attr("category-id");
+        let deletedElement = $(this).parent().parent();
+
+        $.ajax({
+            url: "/Admin/BlogCategory/Delete",
+            type: "Post",
+            data: {
+                id: categoryId
+            },
+            success: function () {
+                $(deletedElement).remove();
+            }
+        })
+    })
+
+    $(document).on("click", "#deleteTag", function (e) {
+        e.preventDefault();
+        let tagId = $(this).attr("tag-id");
+        let deletedElement = $(this).parent().parent();
+
+        $.ajax({
+            url: "/Admin/Tag/Delete",
+            type: "Post",
+            data: {
+                id: tagId
+            },
+            success: function () {
+                $(deletedElement).remove();
+            }
+        })
+    })
+
+    $(document).on("click", "#deleteSlider", function (e) {
+        e.preventDefault();
+        let sliderId = $(this).attr("slider-id");
+        let deletedElement = $(this).parent().parent();
+
+        $.ajax({
+            url: "/Admin/Slider/Delete",
+            type: "Post",
+            data: {
+                id: sliderId
+            },
+            success: function () {
+                $(deletedElement).remove();
+            }
+        })
+    })
+
+    $(document).on("click", "#deleteAbout", function (e) {
+        e.preventDefault();
+        let aboutId = $(this).attr("about-id");
+        let deletedElement = $(this).parent().parent();
+
+        $.ajax({
+            url: "/Admin/About/Delete",
+            type: "Post",
+            data: {
+                id: aboutId
+            },
+            success: function () {
+                $(deletedElement).remove();
+            }
+        })
+    })
 });

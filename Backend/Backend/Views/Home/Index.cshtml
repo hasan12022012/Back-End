@@ -223,16 +223,16 @@
     <div class="container">
         <div class="bookpicture">
             <div class="firstbook">
-                <h2>The History<br>of Phipino</h2>
-                <a href="bookdetails.html">
+                <h2>@Model.Products.FirstOrDefault().Name</h2>
+                <a asp-controller="Product" asp-action="Detail" asp-route-id="@Model.Products.FirstOrDefault().Id">
                     <button class="detailsbtn">
                         <h1>View Details</h1>
                     </button>
                 </a>
             </div>
             <div class="secondbook">
-                <h2>Wilma Mumduya</h2>
-                <a href="bookdetails.html">
+                <h2>@Model.Products.LastOrDefault().Name</h2>
+                <a asp-controller="Product" asp-action="Detail" asp-route-id="@Model.Products.LastOrDefault().Id">
                     <button class="detailsbtn">
                         <h1>View Details</h1>
                     </button>

@@ -3933,6 +3933,14 @@
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\065a4a2e-4d84-4353-9f15-3604621fd2e0_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\065a4a2e-4d84-4353-9f15-3604621fd2e0_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\080dfb90-edb9-470f-90e4-064cd412906c_best_selling9.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\080dfb90-edb9-470f-90e4-064cd412906c_best_selling9.jpg.webp"
     },
@@ -3953,8 +3961,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\31331d78-80ee-4bc4-a178-7637bcf82b33_091a3549-ff92-4578-9bfd-a78f6dec213e_best_selling1.jpg.webp"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\3376eff3-aea5-46a3-a07c-01f9b407ca8d_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\3376eff3-aea5-46a3-a07c-01f9b407ca8d_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
       "PackagePath": "staticwebassets\\assets\\img\\3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\4082d7f7-ba10-44db-a1f7-f727dbb1d98b_0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\4082d7f7-ba10-44db-a1f7-f727dbb1d98b_0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\40a63d97-dca8-46db-b199-5b6f319c0f34_best_selling2.jpg.webp",
@@ -3973,12 +3989,40 @@
       "PackagePath": "staticwebassets\\assets\\img\\5b79f2e8-2c04-4e03-a44d-99cd9410cb81_best-books1.jpg.webp"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\610d5cdb-be20-4780-bb00-60f28cc3cb39_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\610d5cdb-be20-4780-bb00-60f28cc3cb39_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\62d0eaf1-b665-47f8-ad2c-e2f141f11683_0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\62d0eaf1-b665-47f8-ad2c-e2f141f11683_0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\70359f2c-c9fa-4dbc-9d60-7e7c21dd787b_best_selling4.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\70359f2c-c9fa-4dbc-9d60-7e7c21dd787b_best_selling4.jpg.webp"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\70c6a6d5-35c3-4f42-b189-5615a5e442dd_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\70c6a6d5-35c3-4f42-b189-5615a5e442dd_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\73839d26-4a87-479f-8995-23be4de4fcff_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\73839d26-4a87-479f-8995-23be4de4fcff_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\76a91a0f-201e-4551-b46e-ab89908449d5_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\76a91a0f-201e-4551-b46e-ab89908449d5_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\7bdb4e22-4c4a-446b-80e9-02915e202a5b_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\7bdb4e22-4c4a-446b-80e9-02915e202a5b_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\7fb5c612-9e4a-4d24-bf04-65770fed5a5b_c246fda1-3e84-4b6f-81d1-b83f1473664c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\7fb5c612-9e4a-4d24-bf04-65770fed5a5b_c246fda1-3e84-4b6f-81d1-b83f1473664c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\84aa3294-0088-4bb1-a8e0-6a974f47155d_bookadvertise.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\84aa3294-0088-4bb1-a8e0-6a974f47155d_bookadvertise.webp"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\88357311-e210-4d9c-b94f-097f59dbbecc_34d83d1e-6dfe-4479-9390-867e004eb396about.jpg.webp",
@@ -3991,6 +4035,14 @@
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\8d7f3ce9-a2ef-42a3-a1fa-20996a8e2df0_best_selling1.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\8d7f3ce9-a2ef-42a3-a1fa-20996a8e2df0_best_selling1.jpg.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\9f231c29-5b51-4179-b88b-ea499cbbe2ec_8d7f3ce9-a2ef-42a3-a1fa-20996a8e2df0_best_selling1.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\9f231c29-5b51-4179-b88b-ea499cbbe2ec_8d7f3ce9-a2ef-42a3-a1fa-20996a8e2df0_best_selling1.jpg.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\a61bd246-cef3-4451-b1ea-9cc3b1e12afe_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\a61bd246-cef3-4451-b1ea-9cc3b1e12afe_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\a805d3f7-b2db-46f1-ac6f-d7b9fd3c947d_best_selling5.jpg.webp",
@@ -4011,6 +4063,10 @@
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\b5e8060d-9969-4143-b638-185d0e6320d2_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
       "PackagePath": "staticwebassets\\assets\\img\\b5e8060d-9969-4143-b638-185d0e6320d2_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\b8959d28-6e27-4a0a-8172-3dd135d548c4_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\b8959d28-6e27-4a0a-8172-3dd135d548c4_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\best-books1.jpg.webp",
@@ -4065,6 +4121,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\c246fda1-3e84-4b6f-81d1-b83f1473664c_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\c4617eb4-9df1-4083-b4ea-4f2b5b137e5d_0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\c4617eb4-9df1-4083-b4ea-4f2b5b137e5d_0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\cart.svg",
       "PackagePath": "staticwebassets\\assets\\img\\cart.svg"
     },
@@ -4081,12 +4141,32 @@
       "PackagePath": "staticwebassets\\assets\\img\\comment_3.png.webp"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\d17fd69d-326e-4b8c-a393-52a8f6357728_0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\d17fd69d-326e-4b8c-a393-52a8f6357728_0bfd77cd-b748-4401-87e4-3c6c2f6a1689_6f90a0bf-7ba2-4834-97e5-e4100cce55c5about.jpg.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\dabe7485-cd73-4bb0-b895-041ff05b8fe0_40a63d97-dca8-46db-b199-5b6f319c0f34_best_selling2.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\dabe7485-cd73-4bb0-b895-041ff05b8fe0_40a63d97-dca8-46db-b199-5b6f319c0f34_best_selling2.jpg.webp"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\dd2d201d-db04-4428-9fca-042b7b4a7979_best_selling3.jpg.webp",
       "PackagePath": "staticwebassets\\assets\\img\\dd2d201d-db04-4428-9fca-042b7b4a7979_best_selling3.jpg.webp"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\down-chevron.png",
       "PackagePath": "staticwebassets\\assets\\img\\down-chevron.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\ebf9d78b-ec63-4604-8c33-eb6e4b259d32_dd2d201d-db04-4428-9fca-042b7b4a7979_best_selling3.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\ebf9d78b-ec63-4604-8c33-eb6e4b259d32_dd2d201d-db04-4428-9fca-042b7b4a7979_best_selling3.jpg.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\eca665f4-6473-46c6-893c-2b6f3c276894_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\eca665f4-6473-46c6-893c-2b6f3c276894_01f258e3-9b77-4a75-916a-959b53e2dbfb_3f323cb2-0215-4a5d-a905-bba417224ca8_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\ed010509-8dc2-4adc-bbdb-57b179544331_40a63d97-dca8-46db-b199-5b6f319c0f34_best_selling2.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\ed010509-8dc2-4adc-bbdb-57b179544331_40a63d97-dca8-46db-b199-5b6f319c0f34_best_selling2.jpg.webp"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\eface200-2c30-4ab5-9bdc-a8ba5e0e5f77_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
@@ -4099,6 +4179,10 @@
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\f377ce1b-be79-44eb-a57b-1fbdbf8d2fe4_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp",
       "PackagePath": "staticwebassets\\assets\\img\\f377ce1b-be79-44eb-a57b-1fbdbf8d2fe4_6d70ac55-47a0-4013-b67d-2cad4338334c_best-grilled-chicken-scaled.webp"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\f6aae6cc-a9b4-4fdc-8b8c-d9f276d49448_single_blog_5.jpg.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\f6aae6cc-a9b4-4fdc-8b8c-d9f276d49448_single_blog_5.jpg.webp"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\BackEnd\\Back-End\\Backend\\Backend\\wwwroot\\assets\\img\\firstbookback.webp",

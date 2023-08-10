@@ -89,6 +89,121 @@ namespace Backend.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Update(int? id)
+        {
+            if (id == null) return BadRequest();
+
+            Tag dbTag = await GetByIdAsync((int)id);
+
+            ViewBag.Blogs = await GetProductsAsync();
+
+            TagUpdateVM updatedTag = new()
+            {
+                Name = dbTag.Name,
+                Blogs = dbTag.BlogTags
+            };
+
+            return View(updatedTag);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(int id, TagUpdateVM updatedTag)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            ViewBag.Blogs = await GetProductsAsync();
+
+            if (!ModelState.IsValid) return View(updatedTag);
+
+            Tag dbTag = await GetByIdAsync(id);
+
+            dbTag.Name = updatedTag.Name;
+            dbTag.UpdatedAt = DateTime.UtcNow;
+            dbTag.UpdatedBy = user.UserName;
+
+            if (updatedTag.BlogIds == null)
+            {
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            List<BlogTag> blogs = await _context.BlogTags
+                .Where(m => !m.IsDeleted && m.TagId == id)
+                .ToListAsync();
+
+            foreach (var blog in blogs)
+            {
+                dbTag.BlogTags.Remove(blog);
+            }
+
+            foreach (var blogId in updatedTag.BlogIds)
+            {
+                BlogTag blog = new()
+                {
+                    BlogId = blogId
+                };
+
+                dbTag.BlogTags.Add(blog);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        //[Authorize(Roles = "SuperAdmin, Admin")]
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null) return BadRequest();
+
+            Tag tag = await GetByIdAsync((int)id);
+
+            if (tag == null) return NotFound();
+
+            TagDetailVM tagDetail = new()
+            {
+                Name = tag.Name,
+                Blogs = tag.BlogTags
+            };
+
+            return View(tagDetail);
+        }
+
+        //[Authorize(Roles = "SuperAdmin")]
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            Tag tag = await _context.Tags
+                .Where(m => !m.IsDeleted && m.Id == id)
+                .Include(m => m.BlogTags)
+                .FirstOrDefaultAsync();
+
+            if (tag == null) return NotFound();
+
+            tag.IsDeleted = true;
+            tag.DeletedAt = DateTime.UtcNow;
+            tag.DeletedBy = user.UserName;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
         private async Task<int> GetPageCount(int take)
         {
             int tagCount = await _context.Tags.Where(m => !m.IsDeleted).CountAsync();
